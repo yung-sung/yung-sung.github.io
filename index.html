@@ -27,9 +27,58 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+        <style>
+            /* Add some padding on document's body to prevent the content
+            to go underneath the header and footer */
+            body{        
+                padding-top: 50px;
+                padding-bottom: 0px;
+            }
+            html {
+                scroll-padding-top: 50px; /* height of sticky header */
+            }
+            .container{
+                width: 80%;
+                margin: 0 auto; /* Center the DIV horizontally */
+            }
+            .fixed-header, .fixed-footer{
+                width: 100%;
+                position: fixed;        
+                background: rgb(69, 142, 226);
+                padding: 7px 0;
+                color: #fff;
+                font-size: 16px;
+            }
+            .fixed-header{
+                top: 0;
+            }
+            .fixed-footer{
+                bottom: 0;
+            }    
+            /* Some more styles to beutify this example (85, 129, 212) */
+            nav a{
+                color: #fff;
+                text-decoration: none;
+                padding: 7px 25px;
+                display: inline-block;
+            }
+        </style>
     </head>
     <body>
-        <div class="container mt-5">
+        <div class="fixed-header" style="z-index:1;">
+            <div class="container">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href=#publications>Publications</a>
+                    <a href=#talks>Talks</a>
+                    <a href=#projects>Projects</a>
+                    <a href=#honors>Honors</a>
+                    <!-- <a href=#services>Services</a> -->
+                    <a href="https://voidism.github.io/">Blog</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container mt-5" style="z-index:0;">
             <div class="row mb-3">
                 <div class="col">
                     <h1>Yung-Sung Chuang</h1>
@@ -52,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 order-1 order-xs-1 order-sm-1 order-md-0 order-lg-0">
-                    <p>▶ [<a href=#publications>Publications</a>] [<a href=#talks>Talks</a>] [<a href=#projects>Projects</a>] [<a href=#honors>Honors</a>] [<a href=#services>Services</a>] </p>
+                    <!-- <p>▶ [<a href=#publications>Publications</a>] [<a href=#talks>Talks</a>] [<a href=#projects>Projects</a>] [<a href=#honors>Honors</a>] [<a href=#services>Services</a>] </p> -->
                     <p>
                         Hi! I'm a first-year PhD student in <a href="https://www.eecs.mit.edu/" target="_blank">Electrical Engineering and Computer Science</a> at
                         <a href="https://www.mit.edu" target="_blank">Massachusetts Institute of Technology</a>, where I work with <a href="https://www.csail.mit.edu/person/jim-glass"
