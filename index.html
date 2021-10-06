@@ -62,6 +62,12 @@
                 padding: 7px 1.7vw;
                 display: inline-block;
             }
+            h1 span {
+                font-size: 20pt;
+            }
+            h1 span a{
+                font-size: 12pt;
+            }
         </style>
     </head>
     <body>
@@ -81,8 +87,17 @@
         <div class="container mt-5" style="z-index:0;">
             <div class="row mb-3">
                 <div class="col">
-                    <h1>Yung-Sung Chuang</h1>
+                    <h1>Yung-Sung Chuang <span>(莊永松) <a href="#" onclick="$('#my_name').toggle();return false;"><i>How to pronounce?</i></a></span></h1>
                 </div>
+            </div>
+            <div id="my_name" class="abstract" style="display:none;">
+                <p style="color:gray">
+                    My first name Yung-Sung (永松) should be pronounced as "yǒng sōng". My last name Chuang (莊) should be pronounced as "juāng". In my first name, Yung means "forever" and Sung means "pine tree", so it has the meaning of "long-lasting" or "longevity".
+                    </br>
+                    <audio controls>
+                        <source src="files/name-tts.mp3" type="audio/mpeg">
+                    </audio>
+                </p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 order-0 order-xs-0 order-sm-0 order-md-1 order-lg-1">
