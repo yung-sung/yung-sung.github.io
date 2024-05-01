@@ -44,7 +44,8 @@
             .fixed-header, .fixed-footer{
                 width: 100%;
                 position: fixed;        
-                background: rgb(69, 142, 226);
+                /* background: rgb(69, 142, 226); */
+                background: rgb(126, 103, 77);
                 padding: 7px 0;
                 color: #fff;
                 font-size: calc(6px + 0.78125vw);
@@ -56,6 +57,15 @@
                 bottom: 0;
             }    
             /* Some more styles to beutify this example (85, 129, 212) */
+            a {
+                color: rgb(148, 95, 37);
+            }
+            a:hover {
+                color: rgb(9, 67, 17);
+            }
+            .emph {
+                color: rgb(23, 111, 23) !important;
+            }
             nav a{
                 color: #fff;
                 text-decoration: none;
@@ -68,6 +78,7 @@
             h1 span a{
                 font-size: 12pt;
             }
+            /* set the font color of <a href...> to be brown */
         </style>
     </head>
     <body>
@@ -79,29 +90,16 @@
                     <a href=#talks>Talks</a>
                     <a href=#projects>Projects</a>
                     <a href=#honors>Honors</a>
-                    <!-- <a href=#services>Services</a> -->
                     <a href="https://voidism.github.io/">Blog</a>
+                    <!-- <a href=#services>Services</a> -->
                     <!-- <a href="https://www.csail.mit.edu/person/yung-sung-chuang" style="float:right;"><i>@csail.mit</i></a> -->
                 </nav>
             </div>
         </div>
         <div class="container mt-5" style="z-index:0;">
-            <div class="row mb-3">
-                <div class="col">
-                    <h1>Yung-Sung Chuang <span>(莊永松) <a href="#" onclick="$('#my_name').toggle();return false;"><i>How to pronounce?</i></a></span></h1>
-                </div>
-            </div>
-            <div id="my_name" class="abstract" style="display:none;">
-                <p style="color:gray">
-                    My first name Yung-Sung (永松) should be pronounced as "yǒng sōng". My last name Chuang (莊) should be pronounced as "juāng". In my first name, Yung means "forever" and Sung means "pine tree", so it has the meaning of "long-lasting" or "longevity".
-                    </br>
-                    <audio controls>
-                        <source src="files/name-tts.mp3" type="audio/mpeg">
-                    </audio>
-                </p>
-            </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 order-0 order-xs-0 order-sm-0 order-md-1 order-lg-1">
+                <div class="col-lg-4 col-md-6 order-1 order-xs-1 order-sm-1 order-md-0 order-lg-0">
+                <!-- <div class="col-lg-4 col-md-6 order-0 order-xs-0 order-sm-0 order-md-1 order-lg-1"> -->
                     <div class="card mb-3">
                         <img class="card-img-top" src="img/Yung-Sung.jpg" alt="Yung-Sung Chuang">
                         <div class="card-body">
@@ -110,14 +108,30 @@
                             </h5>
                             <p class="card-text">
                                 MIT EECS PhD Student
-                                </br>
-                                Office: 32-G436
-                            </p>
-                        </div>
+                            </br>
+                            Office: 32-G436
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-6 order-1 order-xs-1 order-sm-1 order-md-0 order-lg-0">
+            </div>
+            <!-- <div class="col-lg-8 col-md-6 order-1 order-xs-1 order-sm-1 order-md-0 order-lg-0"> -->
+                <div class="col-lg-8 col-md-6 order-0 order-xs-0 order-sm-0 order-md-1 order-lg-1">
                     <!-- <p>▶ [<a href=#publications>Publications</a>] [<a href=#talks>Talks</a>] [<a href=#projects>Projects</a>] [<a href=#honors>Honors</a>] [<a href=#services>Services</a>] </p> -->
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h1>Yung-Sung Chuang <span>(莊永松) <a href="#" onclick="$('#my_name').toggle();return false;"><i>How to pronounce?</i></a></span></h1>
+                        </div>
+                    </div>
+                    <div id="my_name" class="abstract" style="display:none;">
+                        <p style="color:gray">
+                            My first name Yung-Sung (永松) should be pronounced as "yǒng sōng". My last name Chuang (莊) should be pronounced as "juāng". In my first name, Yung means "forever" and Sung means "pine tree", so it has the meaning of "long-lasting" or "longevity".
+                            </br>
+                            <audio controls>
+                                <source src="files/name-tts.mp3" type="audio/mpeg">
+                            </audio>
+                        </p>
+                    </div>
                     <p>
                         Hi! I'm a third-year PhD student in <a href="https://www.eecs.mit.edu/" target="_blank">Electrical Engineering and Computer Science</a> at
                         <a href="https://www.mit.edu" target="_blank">Massachusetts Institute of Technology</a>, where I work with <a href="https://www.csail.mit.edu/person/jim-glass"
@@ -192,7 +206,100 @@
             <div class="row" id="publications">
                 <div class="col">
                     <h2>Publications</h2>
-                    <h3>2023</h3>
+                    <h3>2024</h3>
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2309.03883" target="_blank">
+                                <b>DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models</b>
+                            </a>
+                            <br/>
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="https://sites.google.com/view/yujia" target="_blank">Yujia Xie</a>,
+                            <a href="https://luohongyin.github.io/" target="_blank">Hongyin Luo</a>,
+                            <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
+                            <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
+                            <a href="https://scholar.google.com/citations?user=TS1RoxAAAAAJ&hl=en" target="_blank">Pengcheng He</a>
+                            <br/>
+                            In <a href="https://iclr.cc/" target="_blank">
+                                <b>
+                                    The Twelfth International Conference on Learning Representations (ICLR)</b></a>, 2024.
+                            <br/>
+                            [<a href="bibs/chuang2023dola.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#chuang2023dola_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://browse.arxiv.org/pdf/2309.03883.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/voidism/DoLa" target="_blank">code</a>]
+                            <div id="chuang2023dola_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Despite their impressive capabilities, large language models (LLMs) are prone to hallucinations, i.e., generating content that deviates from facts seen during pretraining. We propose a simple decoding strategy for reducing hallucinations with pretrained LLMs that does not require conditioning on retrieved external knowledge nor additional fine-tuning. Our approach obtains the next-token distribution by contrasting the differences in logits obtained from projecting the later layers versus earlier layers to the vocabulary space, exploiting the fact that factual knowledge in an LLMs has generally been shown to be localized to particular transformer layers. We find that this Decoding by Contrasting Layers (DoLa) approach is able to better surface factual knowledge and reduce the generation of incorrect facts. DoLa consistently improves the truthfulness across multiple choices tasks and open-ended generation tasks, for example improving the performance of LLaMA family models on TruthfulQA by 12-17% absolute points, demonstrating its potential in making LLMs reliably generate truthful facts.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2309.15678" target="_blank">
+                                <b>Curiosity-driven Red-teaming for Large Language Models</b>
+                            </a>
+                            <br/>
+                            <a href="https://williamd4112.github.io/" target="_blank">Zhang-Wei Hong</a>,
+                            <a href="https://idanshen.github.io/" target="_blank">Idan Shenfeld</a>,
+                            <a href="https://zswang666.github.io/" target="_blank">Tsun-Hsuan Wang</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="https://mitibmwatsonailab.mit.edu/people/aldo-pareja/" target="_blank">Aldo Pareja</a>,
+                            <a href="https://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
+                            <a href="https://akashgit.github.io/" target="_blank">Akash Srivastava</a>,
+                            <a href="https://people.csail.mit.edu/pulkitag/" target="_blank">Pulkit Agrawal</a>
+                            <br/>
+                            In <a href="https://iclr.cc/ICLR2024/" target="_blank">
+                                <b>The Twelfth International Conference on Learning Representations (ICLR)</b></a>, 2024.
+                            <br/>
+                            [<a href="bibs/hong2024curiosity.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#hong2024curiosity_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2309.15678.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/Improbable-AI/curiosity_redteam" target="_blank">code</a>]
+                            <div id="hong2024curiosity_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Large language models (LLMs) hold great potential for many natural language applications but risk generating incorrect or toxic content. To probe when an LLM generates unwanted content, the current paradigm is to recruit a red team of human testers to design input prompts that elicit undesirable responses from LLMs. However, relying solely on human testers is expensive and time-consuming. Recent works automate red teaming by training a separate red team LLM with reinforcement learning (RL) to generate test cases that maximize the chance of eliciting undesirable responses from the target LLM. Current RL methods only generate a small number of effective test cases, leading to low coverage of the span of prompts that elicit undesirable responses from the target LLM. We propose a method of curiosity-driven red teaming (CRT) that optimizes for novelty to increase the coverage of test cases while maintaining or increasing their effectiveness compared to existing methods. CRT successfully provokes toxic responses from the LLaMA2 model, even after it has been heavily fine-tuned using human preferences to avoid toxic outputs. Code is available at https://github.com/Improbable-AI/curiosity_redteam.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2310.03991" target="_blank">
+                                <b>Semstamp: A semantic watermark with paraphrastic robustness for text generation</b>
+                            </a>
+                            <br/>
+                            <a href="https://scholar.google.com/citations?user=H5-QJloAAAAJ&hl=en" target="_blank">Abe Bohan Hou</a>,
+                            <a href="https://jackz.io/" target="_blank">Jingyu Zhang</a>,
+                            <a href="https://cloudygoose.github.io/" target="_blank">Tianxing He</a>,
+                            <a href="https://yichenzw.com/" target="_blank">Yichen Wang</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="#" target="_blank">Hongwei Wang</a>,
+                            <a href="#" target="_blank">Lingfeng Shen</a>,
+                            <a href="#" target="_blank">Benjamin Van Durme</a>,
+                            <a href="https://danielkhashabi.com/" target="_blank">Daniel Khashabi</a>,
+                            <a href="https://homes.cs.washington.edu/~yuliats/" target="_blank">Yulia Tsvetkov</a>
+                            <br/>
+                            In <a href="https://2024.naacl.org/" target="_blank">
+                                <b>Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</b></a>, 2024.
+                            <br/>
+                            [<a href="bibs/hou2024semstamp.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#hou2024semstamp_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2310.03991.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/bohanhou14/SemStamp" target="_blank">code</a>]
+                            <div id="hou2024semstamp_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Existing watermarking algorithms are vulnerable to paraphrase attacks because of their token-level design. To address this issue, we propose SemStamp, a robust sentence-level semantic watermarking algorithm based on locality-sensitive hashing (LSH), which partitions the semantic space of sentences. The algorithm encodes and LSH-hashes a candidate sentence generated by an LLM, and conducts sentence-level rejection sampling until the sampled sentence falls in watermarked partitions in the semantic embedding space. A margin-based constraint is used to enhance its robustness. To show the advantages of our algorithm, we propose a "bigram" paraphrase attack using the paraphrase that has the fewest bigram overlaps with the original sentence. This attack is shown to be effective against the existing token-level watermarking method. Experimental results show that our novel semantic watermark algorithm is not only more robust than the previous state-of-the-art method on both common and bigram paraphrase attacks, but also is better at preserving the quality of generation.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
 
                     <ul class="pl">
                         <li>
@@ -211,7 +318,9 @@
                             <a href="#" target="_blank">Helen Meng</a>,
                             <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>
                             <br/>
-                            In <b>arXiv preprint</b>, 2023.
+                            In <a href="https://2024.naacl.org/" target="_blank">
+                                <b>
+                                    Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL): Findings</b></a>, 2024.
                             <br/>
                             [<a href="bibs/zhang2023natural.bib" target="_blank" type="text/plain">bib</a>]
                             [<a href="#" onclick="$('#zhang2023natural_abstract').toggle();return false;">abstract</a>]
@@ -224,35 +333,170 @@
                             </div>
                         </li>
                     </ul>
+
                     
 
                     <ul class="pl">
                         <li>
-                            <a href="https://arxiv.org/abs/2309.03883" target="_blank">
-                                <b>DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models</b>
+                            <a href="https://aclanthology.org/2024.findings-eacl.151/" target="_blank">
+                                <b>Joint Inference of Retrieval and Generation for Passage Re-ranking</b>
                             </a>
                             <br/>
+                            <a href="https://people.csail.mit.edu/weifang/" target="_blank">Wei Fang</a>,
                             <b>Yung-Sung Chuang</b>,
-                            <a href="https://sites.google.com/view/yujia" target="_blank">Yujia Xie</a>,
-                            <a href="https://luohongyin.github.io/" target="_blank">Hongyin Luo</a>,
-                            <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
-                            <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
-                            <a href="https://scholar.google.com/citations?user=TS1RoxAAAAAJ&hl=en" target="_blank">Pengcheng He</a>
+                            <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>
                             <br/>
-                            In <b>arXiv preprint</b>, 2023.
+                            In <a href="https://2024.eacl.org/" target="_blank">
+                                <b>The 18th Conference of the European Chapter of the Association for Computational Linguistics: Findings</b></a>, 2024.
                             <br/>
-                            [<a href="bibs/chuang2023dola.bib" target="_blank" type="text/plain">bib</a>]
-                            [<a href="#" onclick="$('#chuang2023dola_abstract').toggle();return false;">abstract</a>]
-                            [<a href="https://browse.arxiv.org/pdf/2309.03883.pdf" target="_blank">pdf</a>]
-                            [<a href="https://github.com/voidism/DoLa" target="_blank">code</a>]
-                            <div id="chuang2023dola_abstract" class="abstract" style="display:none;">
+                            [<a href="bibs/fang2024joint.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#fang2024joint_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://aclanthology.org/2024.findings-eacl.151/" target="_blank">pdf</a>]
+                            <div id="fang2024joint_abstract" class="abstract" style="display:none;">
                                 <p>
-                                    Despite their impressive capabilities, large language models (LLMs) are prone to hallucinations, i.e., generating content that deviates from facts seen during pretraining. We propose a simple decoding strategy for reducing hallucinations with pretrained LLMs that does not require conditioning on retrieved external knowledge nor additional fine-tuning. Our approach obtains the next-token distribution by contrasting the differences in logits obtained from projecting the later layers versus earlier layers to the vocabulary space, exploiting the fact that factual knowledge in an LLMs has generally been shown to be localized to particular transformer layers. We find that this Decoding by Contrasting Layers (DoLa) approach is able to better surface factual knowledge and reduce the generation of incorrect facts. DoLa consistently improves the truthfulness across multiple choices tasks and open-ended generation tasks, for example improving the performance of LLaMA family models on TruthfulQA by 12-17% absolute points, demonstrating its potential in making LLMs reliably generate truthful facts.
+                                    Passage retrieval is a crucial component of modern open-domain question answering (QA) systems, providing information for downstream QA components to generate accurate and transparent answers. This study focuses on passage re-ranking, proposing a simple yet effective method, Joint Passage Re-ranking (JPR), that optimizes the mutual information between query and passage distributions, integrating both cross-encoders and generative models in the re-ranking process. Experimental results demonstrate that JPR outperforms conventional re-rankers and language model scorers in both open-domain QA retrieval settings and diverse retrieval benchmarks under zero-shot settings.
                                 </p>
                             </div>
                         </li>
-                    </ul>                    
+                    </ul>
+                    
 
+                    <ul class="pl">
+                        <li>
+                            <a href="https://ieeexplore.ieee.org/document/10477541" target="_blank">
+                                <b>Joint Dual Learning With Mutual Information Maximization for Natural Language Understanding and Generation in Dialogues</b>
+                            </a>
+                            <br/>
+                            <a href="https://www.shangyusu.com/" target="_blank">Shang-Yu Su</a>,
+                            <b>Yung-Sung Chung</b>,
+                            <a href="https://www.csie.ntu.edu.tw/~yvchen/" target="_blank">Yun-Nung Chen</a>
+                            <br/>
+                            In <a href="https://ieeexplore.ieee.org/xpl/conhome/10388490/proceeding" target="_blank">
+                                <b>IEEE/ACM Transactions on Audio, Speech, and Language Processing (Volume: 32)</b></a>, pages 2445 - 2452, March 2024.
+                            <br/>
+                            [<a href="bibs/su2024joint.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#su2024joint_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://ieeexplore.ieee.org/document/10477541" target="_blank">pdf</a>]
+                            <div id="su2024joint_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Modular conversational systems heavily rely on the performance of their natural language understanding (NLU) and natural language generation (NLG) components. NLU focuses on extracting core semantic concepts from input texts, while NLG constructs coherent sentences based on these extracted semantics. Inspired by information theory in digital communication, we introduce a one-way communication model that mirrors human conversations, comprising two distinct phases: (1) the conversion of thoughts into messages, similar to NLG, and (2) the comprehension of received messages, similar to NLU. This paper presents a novel algorithm that trains NLU and NLG collaboratively by concatenating their models and maximizing mutual information between inputs and outputs. This approach efficiently facilitates the transmission of semantics, leading to enhanced learning performance for both components. Our experimental results, based on three benchmark datasets, consistently demonstrate significant improvements for both NLU and NLG tasks, highlighting the practical promise of our proposed method.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2401.13463" target="_blank">
+                                <b>SpeechDPR: End-to-End Spoken Passage Retrieval for Open-Domain Spoken Question Answering</b>
+                            </a>
+                            <br/>
+                            <a href="https://scholar.google.com.tw/citations?user=DoibyQwAAAAJ" target="_blank">Chyi-Jiunn Lin</a>,
+                            <a href="https://daniellin94144.github.io/" target="_blank">Guan-Ting Lin</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="#" target="_blank">Wei-Lun Wu</a>,
+                            <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
+                            <a href="http://www.cs.toronto.edu/~asamir/" target="_blank">Abdelrahman Mohamed</a>,
+                            <a href="https://speechlab.csie.ntu.edu.tw/~tlkagk/" target="_blank">Hung-yi Lee</a>,
+                            <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm" target="_blank">Lin-shan Lee</a>
+                            <br/>
+                            In <a href="https://2024.ieeeicassp.org/" target="_blank">
+                                <b>
+                                IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</b></a>, 2024.
+                            <br/>
+                            [<a href="bibs/lin2024speechdpr.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#lin2024speechdpr_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2401.13463.pdf" target="_blank">pdf</a>]
+                            <div id="lin2024speechdpr_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Spoken Question Answering (SQA) is essential for machines to reply to user's question by finding the answer span within a given spoken passage. SQA has been previously achieved without ASR to avoid recognition errors and Out-of-Vocabulary (OOV) problems. However, the real-world problem of Open-domain SQA (openSQA), in which the machine needs to first retrieve passages that possibly contain the answer from a spoken archive, was never considered. This paper proposes the first known end-to-end framework, Speech Dense Passage Retriever (SpeechDPR), for the retrieval component of the openSQA problem. SpeechDPR learns a sentence-level semantic representation by distilling knowledge from the cascading model of unsupervised ASR (UASR) and text dense retriever (TDR). No manually transcribed speech data is needed. Initial experiments showed performance comparable to the cascading model of UASR and TDR, and significantly better when UASR was poor, verifying that this approach is more robust to speech recognition errors.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10502279" target="_blank">
+                                <b>A Large-Scale Evaluation of Speech Foundation Models</b>
+                            </a>
+                            <br/>
+                            <a href="#" target="_blank">Shu-wen Yang</a>,
+                            <a href="#" target="_blank">Heng-Jui Chang</a>,
+                            <a href="#" target="_blank">Zili Huang</a>,
+                            <a href="#" target="_blank">Andy T Liu</a>,
+                            <a href="#" target="_blank">Cheng-I Lai</a>,
+                            <a href="#" target="_blank">Haibin Wu</a>,
+                            <a href="#" target="_blank">Jiatong Shi</a>,
+                            <a href="#" target="_blank">Xuankai Chang</a>,
+                            <a href="#" target="_blank">Hsiang-Sheng Tsai</a>,
+                            <a href="#" target="_blank">Wen-Chin Huang</a>,
+                            <a href="#" target="_blank">Tzu-hsun Feng</a>,
+                            <a href="#" target="_blank">Po-Han Chi</a>,
+                            <a href="#" target="_blank">Yist Y Lin</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="#" target="_blank">Tzu-Hsien Huang</a>,
+                            <a href="#" target="_blank">Wei-Cheng Tseng</a>,
+                            <a href="#" target="_blank">Kushal Lakhotia</a>,
+                            <a href="#" target="_blank">Shang-Wen Li</a>,
+                            <a href="#" target="_blank">Abdelrahman Mohamed</a>,
+                            <a href="#" target="_blank">Shinji Watanabe</a>,
+                            <a href="#" target="_blank">Hung-yi Lee</a>
+                            <br/>
+                            In <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6570655" target="_blank">
+                                <b>IEEE/ACM Transactions on Audio, Speech, and Language Processing</b></a>, page(s) 1 - 16, April 2024.
+                            <br/>
+                            [<a href="bibs/yang2024largescale.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#yang2024largescale_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://ieeexplore.ieee.org/abstract/document/10502279" target="_blank">pdf</a>]
+                            <div id="yang2024largescale_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    The foundation model paradigm leverages a shared foundation model to achieve state-of-the-art (SOTA) performance for various tasks, requiring minimal downstream-specific data collection and modeling. This approach has proven crucial in the field of Natural Language Processing (NLP). However, the speech processing community lacks a similar setup to explore the paradigm systematically. To bridge this gap, we establish the Speech processing Universal PERformance Benchmark (SUPERB). SUPERB represents an ecosystem designed to evaluate foundation models across a wide range of speech processing tasks, facilitating the sharing of results on an online leaderboard and fostering collaboration through a community-driven benchmark database that aids in new development cycles. We present a unified learning framework for solving the speech processing tasks in SUPERB with the frozen foundation model followed by task-specialized lightweight prediction heads. Combining our results with community submissions, we verify that the framework is simple yet effective, as the best-performing foundation model shows competitive generalizability across most SUPERB tasks. Finally, we conduct a series of analyses to offer an in-depth understanding of SUPERB and speech foundation models, including information flows across tasks inside the models and the statistical significance and robustness of the benchmark.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <h3>2023</h3>
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2310.07654" target="_blank">
+                                <b>Audio-Visual Neural Syntax Acquisition</b>
+                            </a>
+                            <br/>
+                            <a href="https://people.csail.mit.edu/clai24/" target="_blank">Cheng-I Jeff Lai</a>,
+                            <a href="https://home.ttic.edu/~freda/" target="_blank">Freda Shi</a>,
+                            <a href="https://jasonppy.github.io/" target="_blank">Puyuan Peng</a>,
+                            <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
+                            <a href="https://home.ttic.edu/~kgimpel/" target="_blank">Kevin Gimpel</a>,
+                            <a href="https://code-terminator.github.io/" target="_blank">Shiyu Chang</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="https://scholar.google.com/citations?user=eVc2TGkAAAAJ&hl=en" target="_blank">Saurabhchand Bhati</a>,
+                            <a href="https://mitibmwatsonailab.mit.edu/people/david-cox/" target="_blank">David Cox</a>,
+                            <a href="https://www.cs.utexas.edu/~harwath/" target="_blank">David Harwath</a>,
+                            <a href="https://mitibmwatsonailab.mit.edu/people/yang-zhang/" target="_blank">Yang Zhang</a>,
+                            <a href="https://home.ttic.edu/~klivescu/" target="_blank">Karen Livescu</a>,
+                            <a href="https://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>
+                            <br/>
+                            In <a href="https://asru2023.org/" target="_blank">
+                                <b>2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)</b>
+                            </a>.
+                            <br/>
+                            [<a href="bibs/lai2023audiovisual.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#lai2023audiovisual_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2310.07654.pdf" target="_blank">pdf</a>]
+                            <div id="lai2023audiovisual_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    We study phrase structure induction from visually-grounded speech. The core idea is to first segment the speech waveform into sequences of word segments, and subsequently induce phrase structure using the inferred segment-level continuous representations. We present the Audio-Visual Neural Syntax Learner (AV-NSL) that learns phrase structure by listening to audio and looking at images, without ever being exposed to text. By training on paired images and spoken captions, AV-NSL exhibits the capability to infer meaningful phrase structures that are comparable to those derived by naturally-supervised text parsers, for both English and German. Our findings extend prior work in unsupervised language acquisition from speech and grounded grammar induction, and present one approach to bridge the gap between the two topics.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    
                     <ul class="pl">
                         <li>
                             <a href="https://openreview.net/forum?id=yt3hnXNPfr" target="_blank">
@@ -322,7 +566,7 @@
                             <br/>
                             In <a href="https://2023.aclweb.org/" target="_blank">
                                 <b>
-                                Findings of The 61st Annual Meeting of the Association for Computational Linguistics</b></a>, 2023.
+                                The 61st Annual Meeting of the Association for Computational Linguistics: Findings</b></a>, 2023.
                             <br/>
                             [<a href="bibs/chuang2023expand.bib" target="_blank" type="text/plain">bib</a>]
                             [<a href="#" onclick="$('#chuang2023expand_abstract').toggle();return false;">abstract</a>]
@@ -346,7 +590,9 @@
                             <b>Yung-Sung Chuang</b>,
                             <a href="https://yuangongnd.github.io/" target="_blank">Yuan Gong</a>, Tianhua Zhang, <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>, Xixin Wu, Danny Fox, Helen Meng, <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>
                             <br/>
-                            In <b>arXiv preprint</b>, 2023.
+                            In <a href="https://aclanthology.org/volumes/2023.findings-emnlp/" target="_blank">
+                                <b>
+                                Findings of the Association for Computational Linguistics: EMNLP</b></a>, 2023.
                             <br/>
                             [<a href="bibs/luo2023sail.bib" target="_blank" type="text/plain">bib</a>]
                             [<a href="#" onclick="$('#luo2023sail_abstract').toggle();return false;">abstract</a>]
@@ -533,7 +779,7 @@
                             <br/>
                             In <a href="https://2022.naacl.org/" target="_blank">
                                 <b>
-                                  Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</b></a>, 2022. <a style="color:#e22222"> (Oral Paper) </a>
+                                  Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</b></a>, 2022. <a class="emph"><b> (Oral Paper) </b></a>
                             <br/>
                             [<a href="bibs/chuang2022diffcse.bib" target="_blank" type="text/plain">bib</a>]
                             [<a href="#" onclick="$('#chuang2022diffcse_abstract').toggle();return false;">abstract</a>]
@@ -565,8 +811,9 @@
                             <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html" target="_blank">Hung-yi Lee</a>, 
                             <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm" target="_blank">Lin-shan Lee</a>.
                             <br/>
+                            In <a href="https://www.interspeech2022.org/" target="_blank">
                                 <b>
-                                    Submitted to Interspeech 2022</b>.
+                                    Interspeech</b></a>, 2022.
                             <br/>
                             [<a href="bibs/lin2022dual.bib" target="_blank">bib</a>]
                             [<a href="#" onclick="$('#lin2022dual_abstract').toggle();return false;">abstract</a>]
@@ -595,7 +842,7 @@
                             <br/>
                             In <a href="https://proceedings.neurips.cc/paper/2021/hash/b17c0907e67d868b4e0feb43dbbe6f11-Abstract.html" target="_blank">
                                 <b>
-                                    Thirty-fifth Conference on Neural Information Processing Systems (NeurIPS)</b></a>, 2021. <a style="color:#e22222">(Spotlight Paper)</a>
+                                    Thirty-fifth Conference on Neural Information Processing Systems (NeurIPS)</b></a>, 2021. <a class="emph"><b>(Spotlight Paper)</b></a>
                             <br/>
                             [<a href="bibs/lai2021parp.bib" target="_blank">bib</a>]
                             [<a href="#" onclick="$('#lai2021parp_abstract').toggle();return false;">abstract</a>]
@@ -787,7 +1034,7 @@
                             <br/>
                             In <a href="http://www.interspeech2020.org/" target="_blank">
                                 <b>
-                                    Interspeech</b></a>, 2020. <a style="color:#e22222">(Interspeech 2020 Travel Grant)</a>
+                                    Interspeech</b></a>, 2020. <a class="emph"><b>(Interspeech 2020 Travel Grant)</b></a>
                             <br/>
                             [<a href="bibs/chuang2020speechbert.bib" target="_blank">bib</a>]
                             [<a href="#" onclick="$('#chuang2020speechbert_abstract').toggle();return false;">abstract</a>]
