@@ -86,10 +86,10 @@
             <div class="container">
                 <nav>
                     <a href="#">Home</a>
-                    <a href=#publications>Publications</a>
                     <a href=#talks>Talks</a>
-                    <a href=#projects>Projects</a>
+                    <a href=#publications>Publications</a>
                     <a href=#honors>Honors</a>
+                    <a href=#services>Services</a>
                     <a href="https://voidism.github.io/">Blog</a>
                     <!-- <a href=#services>Services</a> -->
                     <!-- <a href="https://www.csail.mit.edu/person/yung-sung-chuang" style="float:right;"><i>@csail.mit</i></a> -->
@@ -107,7 +107,7 @@
                                 <b>Yung-Sung Chuang</b>
                             </h5>
                             <p class="card-text">
-                                MIT EECS PhD Student
+                                MIT EECS PhD Student @ CSAIL
                             </br>
                             Office: 32-G436
                         </p>
@@ -125,7 +125,7 @@
                     </div>
                     <div id="my_name" class="abstract" style="display:none;">
                         <p style="color:gray">
-                            My first name Yung-Sung (永松) should be pronounced as "yǒng sōng". My last name Chuang (莊) should be pronounced as "juāng". In my first name, Yung means "forever" and Sung means "pine tree", so it has the meaning of "long-lasting" or "longevity".
+                            My first name Yung-Sung (永松) should be pronounced as "yong song". My last name Chuang (莊) should be pronounced as "jwang". In my first name, Yung means "forever" and Sung means "pine tree", so it has the meaning of "long-lasting" or "longevity".
                             </br>
                             <audio controls>
                                 <source src="files/name-tts.mp3" type="audio/mpeg">
@@ -133,24 +133,38 @@
                         </p>
                     </div>
                     <p>
-                        Hi! I'm a third-year PhD student in <a href="https://www.eecs.mit.edu/" target="_blank">Electrical Engineering and Computer Science</a> at
+                        Hi! I'm a fourth-year PhD student in <a href="https://www.eecs.mit.edu/" target="_blank">Electrical Engineering and Computer Science</a> at
                         <a href="https://www.mit.edu" target="_blank">Massachusetts Institute of Technology</a>, where I work with <a href="https://www.csail.mit.edu/person/jim-glass"
-                        target="_blank">Jim Glass</a>. 
+                        target="_blank">Jim Glass</a> at <a href="https://www.csail.mit.edu/" target="_blank">CSAIL</a>.
                     </p>
                     <p>
-                        My research interest broadly covers 
-                        the deep learning technique for natural language processing and 
-                        speech processing. In particular, I aim to utilize the ability of 
-                        machines to help people grasp large information in text/audio form 
-                        in efficient ways.
+                        My research primarily focuses on natural language processing and large language models (LLMs), 
+                        with a particular interest in improving their factuality and reliability. 
+                        In <a href="https://arxiv.org/abs/2309.03883" target="_blank">DoLa</a>, 
+                        we proposed a decoding strategy that enhances LLM factuality by contrasting the knowledge 
+                        across different transformer layers.
+                        In <a href="https://arxiv.org/abs/2407.07071" target="_blank">Lookback Lens</a>, 
+                        we introduced a method that detects and mitigates contextual hallucinations in LLMs 
+                        using attention maps. 
+                        Most recently, in <a href="https://arxiv.org/abs/2502.09604" target="_blank">SelfCite</a>, 
+                        we developed a self-supervised framework that enables LLMs to generate fine-grained, sentence-level citations by leveraging context ablation as a reward signal.
                     </p>
                     <p>
-                        Previously, I was an undergraduate student in Electrical Engineering
-                        at National Taiwan University. I joined Speech Processing Lab 
-                        supervised by <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html">Hung-Yi Lee</a> and <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm">Lin-shan Lee</a>, and Machine Intelligence Understanding Lab 
-                        supervised by <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a>. I received the NTU Presidential 
-                        Award for top 5% students four times in 2018-2020, <a href="https://irvingthofoundation.github.io/ho-fellows.htm">Irving T. Ho Memorial 
-                        Scholarship</a> in 2018 and 2019. Here is my <a href="https://people.csail.mit.edu/yungsung/files/CV.pdf">Curriculum Vitae</a>.
+                        I also explore retrieval-based approaches to strengthen LLM by grounding answers
+                        in real documents. For instance, in <a href="https://arxiv.org/abs/2305.17080" target="_blank">Expand, Rerank, and Retrieve</a>, 
+                        we proposed query reranking to achieve more accurate
+                        retrieval results for open-domain QA. In <a href="https://arxiv.org/abs/2204.10298" target="_blank">DiffCSE</a>, 
+                        we built a contrastive learning method based on the differences between 
+                        similar sentences to further boost the quality of sentence embeddings.
+                    </p>
+                    <p>
+                        I was fortunate to intern at FAIR Meta, Microsoft, and MIT-IBM Watson AI Lab.
+                        Before joining MIT, I was an undergraduate student in Electrical Engineering
+                        at National Taiwan University, where I worked with 
+                        <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html">Hung-Yi Lee</a>,
+                        <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung (Vivian) Chen</a>,
+                        and <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm">Lin-shan Lee</a>.
+                        Here is my <a href="https://people.csail.mit.edu/yungsung/files/CV.pdf">Curriculum Vitae</a>.
                     </p>
                 </div>
             </div>
@@ -169,6 +183,15 @@
                 <div class="col">
                     <h2>Recent News</h2>
                     <ul>
+                        <li>
+                          (05/2025) Start my summer internship at FAIR, Meta with <a href="https://scholar.google.com/citations?user=UjpbO6IAAAAJ&hl=en" target="_blank">Luke Zettlemoyer</a>. <br/>
+                        </li>
+                        <li>
+                          (04/2025) My recent talk at MIT EI Seminar <a href="https://youtu.be/oEFRH80LndM?si=uM_lb2sUm1NVmezT">"Reducing Hallucinations in LLMs via Decoding, Detection, and Citation"</a> is on Youtube! 
+                        </li>
+                        <li>
+                          (05/2024) Start my summer internship at FAIR, Meta with <a href="https://scottyih.org/" target="_blank">Scott Yih</a>, <a href="https://swdanielli.github.io/" target="_blank">Daniel Li</a>, <a href="https://howardhsu.github.io/" target="_blank">Hu Xu</a>. <br/>
+                        </li>
                         <li>
                           (06/2023) Start my summer internship at Microsoft with <a href="https://scholar.google.com/citations?user=TS1RoxAAAAAJ&hl=en" target="_blank">Pengcheng He</a>, <a href="https://sites.google.com/view/yujia" target="_blank">Yujia Xie</a>. See our <a href="https://arxiv.org/abs/2309.03883">DoLa paper</a>. <br/>
                         </li>
@@ -203,10 +226,106 @@
                 </div>
             </div>
             <hr>
+            <div class="row" id="talks">
+                <div class="col">
+                    <h2>Talks</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oEFRH80LndM?si=nuyL3AsfZxjw4Tf3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>
+                        <b>Reducing Hallucinations in LLMs via Decoding, Detection, and Citation</b>
+                        <br/>
+                        <i>MIT CSAIL: EI Seminar, April 24, 2025</i>
+                    </p>
+                    <p><i>For my other talks at the conferences, please see <a href="https://www.youtube.com/@yung-sung">https://www.youtube.com/@yung-sung</a></i></p>
+                </div>
+            </div>
+                    
             <div class="row" id="publications">
                 <div class="col">
                     <h2>Publications</h2>
+                    <p><i>For a full list of papers, see my <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank">Google Scholar</a>.</i></p>
+                    <h3>2025</h3>
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2502.09604" target="_blank">
+                                <b>SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models</b>
+                            </a>
+                            <br/>
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="https://bencw99.github.io/" target="_blank">Benjamin Cohen-Wang</a>,
+                            <a href="https://www.szj.io/" target="_blank">Shannon Zejiang Shen</a>,
+                            <a href="https://zhaofengwu.github.io/" target="_blank">Zhaofeng Wu</a>,
+                            <a href="https://howardhsu.github.io/" target="_blank">Hu Xu</a>,
+                            <a href="https://victorialin.org/" target="_blank">Xi Victoria Lin</a>,
+                            <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
+                            <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
+                            <a href="https://scottyih.org/" target="_blank">Wen-tau Yih</a>
+                            <br/>
+                            To appear in <b>ICML</b>, 2025.
+                            <br/>
+                            [<a href="bibs/chuang2025selfcite.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#selfcite_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2502.09604.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/voidism/SelfCite" target="_blank">code</a>]
+                            <div id="selfcite_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    We introduce <i>SelfCite</i>, a novel self-supervised approach that aligns LLMs to generate high-quality, fine-grained, sentence-level citations for the statements in their generated responses. Instead of only relying on costly and labor-intensive annotations, SelfCite leverages a reward signal provided by the LLM itself through context ablation: If a citation is necessary, removing the cited text from the context should prevent the same response; if sufficient, retaining the cited text alone should preserve the same response. This reward can guide the inference-time best-of-N sampling strategy to improve citation quality significantly, as well as be used in preference optimization to directly fine-tune the models for generating better citations. The effectiveness of SelfCite is demonstrated by increasing citation F1 up to 5.3 points on the LongBench-Cite benchmark across five long-form question answering tasks.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2504.13752" target="_blank">
+                                <b>Learning to Attribute with Attention</b>
+                            </a>
+                            <br/>
+                            <a href="https://bencw99.github.io/" target="_blank">Benjamin Cohen-Wang</a>,
+                            <b>Yung-Sung Chuang</b>,
+                            <a href="https://madry.mit.edu/" target="_blank">Aleksander Madry</a>
+                            <br/>
+                            arXiv preprint arXiv:2504.13752, 2025.
+                            <br/>
+                            [<a href="bibs/cohenwang2025learning.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#at2_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2504.13752.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/MadryLab/AT2" target="_blank">code</a>]
+                            <div id="at2_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    Given a sequence of tokens generated by a language model, we may want to identify the preceding tokens that influence the model to generate this sequence. Performing such token attribution is expensive; a common approach is to ablate preceding tokens and directly measure their effects. To reduce the cost of token attribution, we revisit attention weights as a heuristic for how a language model uses previous tokens. Naive approaches to attribute model behavior with attention (e.g., averaging attention weights across attention heads to estimate a token's influence) have been found to be unreliable. To attain faithful attributions, we propose treating the attention weights of different attention heads as features. This way, we can learn how to effectively leverage attention weights for attribution (using signal from ablations). Our resulting method, Attribution with Attention (AT2), reliably performs on par with approaches that involve many ablations, while being significantly more efficient. To showcase the utility of AT2, we use it to prune less important parts of a provided context in a question answering setting, improving answer quality.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
                     <h3>2024</h3>
+
+                    <ul class="pl">
+                        <li>
+                            <a href="https://arxiv.org/abs/2407.07071" target="_blank">
+                                <b>Lookback Lens: Detecting and Mitigating Contextual Hallucinations in Large Language Models Using Only Attention Maps</b>
+                            </a>
+                            <br/>
+                            <b>Yung-Sung Chuang</b>
+                            <a href="https://linlu-qiu.github.io/" target="_blank">Linlu Qiu</a>,
+                            <a href="https://chengyuhsieh.github.io/" target="_blank">Cheng-Yu Hsieh</a>,
+                            <a href="https://www.ranjaykrishna.com/index.html" target="_blank">Ranjay Krishna</a>,
+                            <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>,
+                            <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>
+                            <br/>
+                            In <a href="https://2024.emnlp.org" target="_blank"><b>The Conference on Empirical Methods in Natural Language Processing</b></a>, 2024.
+                            <br/>
+                            [<a href="bibs/chuang2024lookback.bib" target="_blank" type="text/plain">bib</a>]
+                            [<a href="#" onclick="$('#lookback_abstract').toggle();return false;">abstract</a>]
+                            [<a href="https://arxiv.org/pdf/2407.07071.pdf" target="_blank">pdf</a>]
+                            [<a href="https://github.com/voidism/Lookback-Lens" target="_blank">code</a>]
+                            <div id="lookback_abstract" class="abstract" style="display:none;">
+                                <p>
+                                    When asked to summarize articles or answer questions given a passage, large language models (LLMs) can hallucinate details and respond with unsubstantiated answers that are inaccurate with respect to the input context. This paper describes a simple approach for detecting such contextual hallucinations. We hypothesize that contextual hallucinations are related to the extent to which an LLM attends to information in the provided context versus its own generations. Based on this intuition, we propose a simple hallucination detection model whose input features are given by the ratio of attention weights on the context versus newly generated tokens (for each attention head). We find that a linear classifier based on these lookback ratio features is as effective as a richer detector that utilizes the entire hidden states of an LLM or a text-based entailment model. The lookback ratio-based detector -- Lookback Lens -- is found to transfer across tasks and even models, allowing a detector that is trained on a 7B model to be applied (without retraining) to a larger 13B model. We further apply this detector to mitigate contextual hallucinations, and find that a simple classifier-guided decoding approach is able to reduce the amount of hallucination, for example by 9.6% in the XSum summarization task.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
 
                     <ul class="pl">
                         <li>
@@ -1079,205 +1198,7 @@
                 </div>
             </div>
             <hr>
-            <div class="row" id="talks">
-                <div class="col">
-                    <h2>Talks</h2>
-                    <ul>
-                        <li>
-                            <b>Lectures (in Mandarin)</b><br/>
-                            <a href="https://www.youtube.com/watch?v=jvyKmU4OM3c" target="_blank">
-                                <b>Non-Autoregressive Conditional Sequence Modeling (DLHLP 2020 @ NTU, Taiwan)</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jvyKmU4OM3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <br/>
-                            <a href="https://www.youtube.com/watch?v=YIuBHB9Ejok" target="_blank">
-                                <b>Unsupervised Syntactic Parsing (Machine Learning 2019 @ NTU, Taiwan)</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YIuBHB9Ejok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </li>
-                        <li>
-                            <b>Presentations</b><br/>
-                            <a href="https://www.youtube.com/watch?v=9vx-HyzcXtU" target="_blank">
-                                <b>[NAACL 2022] DiffCSE: Difference-based Contrastive Learning for Sentence Embeddings @ Seattle, WA</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9vx-HyzcXtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <br/>
-                            <a href="https://www.youtube.com/watch?v=bAX8oL_ywpQ" target="_blank">
-                                <b>[ACL-IJCNLP 2021] Mitigating Biases in Toxic Language Detection through Invariant Rationalization @ Virtual</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bAX8oL_ywpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <br/>
-                            <a href="https://www.youtube.com/watch?v=I80xwWfswl8" target="_blank">
-                                <b>[ACL-IJCNLP 2021] Investigating the Reordering Capability in CTC-based Non-Autoregressive End-to-End Speech Translation @ Virtual</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/I80xwWfswl8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <!-- <br/>
-                            <a href="https://www.youtube.com/watch?v=t3Ee5fA8mCo" target="_blank">
-                                <b>[EMNLP 2020] Lifelong Language Knowledge Distillation</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/t3Ee5fA8mCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <br/>
-                            <a href="https://www.youtube.com/watch?v=a6txVSmX7fI" target="_blank">
-                                <b>[Interspeech 2020] SpeechBERT: An Audio-and-text Jointly Learned Language Model for End-to-end Spoken Question Answering</b>
-                            </a>
-                            <br/>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/a6txVSmX7fI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
 
-            <div class="row" id="projects">
-                <div class="col">
-                    <h2>Projects</h2>
-                    <ul>
-                        <li>
-                            <a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">
-                                <b>Speech Recognition for Impaired Speaker</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>]
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            [<a href="https://github.com/voidism/ImpairedVoiceASR" target="_blank">code</a>]
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    Reducing WER from 80% to 20% for impaired voice speaker via personalized adaptation (in Mandarin). Final Project in <i>Introduction to Biomedical Engineering 2020 Spring</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://github.com/bchao1/108-2-NMLAB-Final" target="_blank">
-                                <b>DPP: Decentralized Publishing Platform</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            [<a href="https://github.com/bchao1/108-2-NMLAB-Final" target="_blank">code</a>]
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    A Decentralized Publishing Platform created with Blockchain and Etheruem smart contract. Final Project in <i>Networking and Multinmedia Lab 2020 Spring</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://github.com/w4n9r3ntru3/MIPS-Processor" target="_blank">
-                                <b>Single-Cycle MIPS Processor Implementation in Verilog</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            [<a href="https://github.com/w4n9r3ntru3/MIPS-Processor" target="_blank">code</a>]
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    Ranking 2nd place out of 44 groups by A*T value (Area * Clock Time). Final Project in <i>Computer Architecture 2019 Fall</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://github.com/raywu0123/ICCAD2019-Problem-E" target="_blank">
-                                <b>Rectilinear Polygon Operations for Physical Design</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            [<a href="https://github.com/raywu0123/ICCAD2019-Problem-E" target="_blank">code</a>]
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    <a href="http://iccad-contest.org/2019/tw/problems.html" target="_blank">ICCAD 2019 CAD Contest - Problem E</a>. Final Project in <i>Algorithms 2019 Spring</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://voidism.github.io/pdfs/2019_DLCV_Final_Project_Poster_(final).pdf" target="_blank">
-                                <b>Multi-Source Unsupervised Domain Adaptation Challenge</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            [<a href="https://voidism.github.io/pdfs/2019_DLCV_Final_Project_Poster_(final).pdf" target="_blank">pdf</a>]
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    Conducted experiments on unsupervised domain adaptation (UDA) for multi-source dataset from ICCV2019 Workshop Challenge. Final Project in <i>Deep Learning for Computer Vision 2019 Spring</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <!-- <li> -->
-                            <!-- <a href="https://github.com/voidism/Transformer_CycleGAN_Text_Style_Transfer-pytorch" target="_blank"> -->
-                                <!-- <b>Transformer-based CycleGAN Text Style Transfer</b> -->
-                            <!-- </a> -->
-                            <!-- <br/> -->
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://aclanthology.org/2020.findings-emnlp.443.pdf" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://github.com/voidism/Transformer_CycleGAN_Text_Style_Transfer-pytorch" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://slideslive.com/38938863/lifelong-language-knowledge-distillation" target="_blank">video</a>] -->
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <!-- <div> -->
-                                <!-- <p> -->
-                                    <!-- Building a transformer-based cycleGAN style transfer framework for text generation. -->
-                                <!-- </p> -->
-                            <!-- </div> -->
-                        <!-- </li> -->
-                        <li>
-                            <a href="https://arxiv.org/abs/1901.05816" target="_blank">
-                                <b>Robust Chinese Word Segmentation with Contextualized Word Representations</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            [<a href="https://arxiv.org/pdf/1901.05816.pdf" target="_blank">pdf</a>]
-                            [<a href="https://pypi.org/project/pywordseg/" target="_blank">pypi</a>]
-                            [<a href="https://github.com/voidism/pywordseg" target="_blank">code</a>]
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    Developed an open source state-of-the-art Chinese word segmentation system with BiLSTM and ELMo, helping the downstream Chinese NLP task. Final project in <i>Digital Speech Processing 2018 Fall</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="https://github.com/voidism/Big-Two" target="_blank">
-                                <b>Big Two Game Environment and Agent in C++</b>
-                            </a>
-                            <br/>
-                            <!-- [<a href="#" onclick="$('#sris_abstract').toggle();return false;">abstract</a>] -->
-                            <!-- [<a href="https://drive.google.com/file/d/199N-2Up1SFS_BtM_nRVw8yCiYuepw1bg/view" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://arxiv.org/pdf/1901.05816.pdf" target="_blank">pdf</a>] -->
-                            <!-- [<a href="https://pypi.org/project/pywordseg/" target="_blank">pypi</a>] -->
-                            [<a href="https://github.com/voidism/Big-Two" target="_blank">code</a>]
-                            <!-- [<a href="https://leaderboard.allenai.org/quoref" target="_blank">leaderboard</a>] -->
-                            <div>
-                                <p>
-                                    Developed a human-computer game program of the big-two game. Final Project in <i>Computer Programming 2017 Fall</i>@NTU.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
             <div class="row" id="honors">
                 <div class="col">
                     <h2>Honors</h2>
@@ -1315,10 +1236,6 @@
                         <li>
                             <b>1st place of Dept. of Transportation</b>, HackNTU 2017 (out of 100+ teams), Jul. 2017
                         </li>
-                        <!-- <li>
-                            <b>Teaching Assistant:</b> <br/>
-                              Deep Learning for Human Language Processing, 2020 Spring@NTU (Prof. Hung-Yi Lee)
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -1329,26 +1246,22 @@
                     <ul>
                         <li>
                             <b>Reviewer:</b> <br/>
-                              NeurIPS 2021, 2022, 2023<br/>
-                              ICLR 2022, 2023, 2024<br/>
-                              ICML 2022, 2023<br/>
+                              NeurIPS 2021, 2022, 2023, 2024<br/>
+                              ICLR 2022, 2023, 2024, 2025<br/>
+                              ICML 2022, 2023, 2024, 2025<br/>
+                              ACL ARR 2023, 2024, 2025<br/>
                               EMNLP 2022, 2023<br/>
                               ACL 2023<br/>
                               AAAI 2023<br/>
                               ICASSP 2022, 2023<br/>
-                              TASL 2023<br/>
+                              TASL 2023, 2024, 2025<br/>
                         </li>
-                        <!-- <li>
-                            <b>Teaching Assistant:</b> <br/>
-                              Deep Learning for Human Language Processing, 2020 Spring@NTU (Prof. Hung-Yi Lee)
-                        </li> -->
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col">
-                    <!-- <h2>Miscellany</h2> -->
                     <ul>
                         <li>
                             This website is built from the <a href="https://github.com/nelson-liu/website">source code</a> of Nelson F. Liu's awesome website (<a href="https://nelsonliu.me/"
