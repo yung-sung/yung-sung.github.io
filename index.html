@@ -262,10 +262,11 @@
                             <br/>
                             To appear in <b>ICML</b>, 2025.
                             <br/>
+                            [<a href="https://selfcite.github.io" target="_blank">blog</a>]
                             [<a href="bibs/chuang2025selfcite.bib" target="_blank" type="text/plain">bib</a>]
                             [<a href="#" onclick="$('#selfcite_abstract').toggle();return false;">abstract</a>]
                             [<a href="https://arxiv.org/pdf/2502.09604.pdf" target="_blank">pdf</a>]
-                            [<a href="https://github.com/voidism/SelfCite" target="_blank">code</a>]
+                            [<a href="https://github.com/facebookresearch/SelfCite" target="_blank">code</a>]
                             <div id="selfcite_abstract" class="abstract" style="display:none;">
                                 <p>
                                     We introduce <i>SelfCite</i>, a novel self-supervised approach that aligns LLMs to generate high-quality, fine-grained, sentence-level citations for the statements in their generated responses. Instead of only relying on costly and labor-intensive annotations, SelfCite leverages a reward signal provided by the LLM itself through context ablation: If a citation is necessary, removing the cited text from the context should prevent the same response; if sufficient, retaining the cited text alone should preserve the same response. This reward can guide the inference-time best-of-N sampling strategy to improve citation quality significantly, as well as be used in preference optimization to directly fine-tune the models for generating better citations. The effectiveness of SelfCite is demonstrated by increasing citation F1 up to 5.3 points on the LongBench-Cite benchmark across five long-form question answering tasks.
