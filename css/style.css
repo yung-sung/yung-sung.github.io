@@ -751,8 +751,8 @@ ul.honors-list {
     }
 }
 
-/* Extra small phones (< 375px) */
-@media (max-width: 374px) {
+/* Extra small phones (< 480px) */
+@media (max-width: 480px) {
     .fixed-header .nav-links {
         gap: min(4px, 1vw);
     }
