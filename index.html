@@ -833,44 +833,77 @@
                     const nameElement = document.querySelector('.nav-brand a');
                     const navLinks = document.querySelectorAll('.nav-links a');
                     
+                    // Ensure elements exist before proceeding
+                    if (!nameElement || navLinks.length === 0) {
+                        console.log('Header elements not found, retrying...');
+                        setTimeout(updateHeaderText, 100);
+                        return;
+                    }
+                    
                     if (window.innerWidth <= 768) {
                         // Mobile: two-line name
-                        nameElement.innerHTML = 'Yung-Sung<br>Chuang';
+                        if (nameElement) {
+                            nameElement.innerHTML = 'Yung-Sung<br>Chuang';
+                        }
                         
                         // Mobile: labels with line breaks for longer ones
                         const mobileLabels = ['Google<br>Scholar', 'CV', 'Twitter', 'Github', 'LinkedIn', 'Blog'];
                         navLinks.forEach((link, index) => {
-                            const icon = link.querySelector('i');
-                            const badge = link.querySelector('.citation-badge');
-                            link.innerHTML = '';
-                            link.appendChild(icon);
-                            if (badge) link.appendChild(badge);
-                            
-                            // Create text element with HTML for line breaks
-                            const textSpan = document.createElement('span');
-                            textSpan.innerHTML = mobileLabels[index];
-                            link.appendChild(textSpan);
+                            if (link && mobileLabels[index]) {
+                                const icon = link.querySelector('i');
+                                const badge = link.querySelector('.citation-badge');
+                                
+                                // Clear and rebuild
+                                link.innerHTML = '';
+                                if (icon) link.appendChild(icon);
+                                if (badge) link.appendChild(badge);
+                                
+                                // Create text element with HTML for line breaks
+                                const textSpan = document.createElement('span');
+                                textSpan.innerHTML = mobileLabels[index];
+                                textSpan.style.fontSize = '9px';
+                                textSpan.style.lineHeight = '1.1';
+                                textSpan.style.textAlign = 'center';
+                                link.appendChild(textSpan);
+                            }
                         });
                     } else {
                         // Desktop: full name
-                        nameElement.textContent = 'Yung-Sung Chuang';
+                        if (nameElement) {
+                            nameElement.innerHTML = 'Yung-Sung Chuang';
+                        }
                         
                         // Desktop: full labels for nav links
                         const desktopLabels = ['Google Scholar', 'CV', 'Twitter', 'Github', 'LinkedIn', 'Blog'];
                         navLinks.forEach((link, index) => {
-                            const icon = link.querySelector('i');
-                            const badge = link.querySelector('.citation-badge');
-                            link.innerHTML = '';
-                            link.appendChild(icon);
-                            if (badge) link.appendChild(badge);
-                            link.appendChild(document.createTextNode(desktopLabels[index]));
+                            if (link && desktopLabels[index]) {
+                                const icon = link.querySelector('i');
+                                const badge = link.querySelector('.citation-badge');
+                                
+                                // Clear and rebuild
+                                link.innerHTML = '';
+                                if (icon) link.appendChild(icon);
+                                if (badge) link.appendChild(badge);
+                                
+                                const textNode = document.createTextNode(desktopLabels[index]);
+                                link.appendChild(textNode);
+                            }
                         });
                     }
                 }
 
+                // Multiple initialization attempts to ensure it works
+                function initializeHeader() {
+                    updateHeaderText();
+                    // Backup calls in case the first one fails
+                    setTimeout(updateHeaderText, 100);
+                    setTimeout(updateHeaderText, 500);
+                }
+
                 // Initial call and resize listener
-                updateHeaderText();
+                initializeHeader();
                 window.addEventListener('resize', updateHeaderText);
+                window.addEventListener('load', updateHeaderText);
                 // Image popup functionality
                 const imageModal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');
