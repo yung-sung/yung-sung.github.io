@@ -215,36 +215,6 @@ ul.talks-list {
     border-left: 4px solid #007bff;
 }
 
-.bio-content .links {
-    margin: 15px 0;
-}
-
-.bio-content .links a {
-    margin-right: 15px;
-    padding: 10px 16px;
-    background: #e9ecef;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.95em;
-    transition: background-color 0.2s ease;
-}
-
-.bio-content .links a:hover {
-    background: #dee2e6;
-    text-decoration: none;
-}
-
-.bio-content .links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.bio-content .links a i {
-    font-size: 1em;
-    width: 16px;
-    text-align: center;
-}
 
 /* News section styling */
 .news-section {
@@ -325,6 +295,36 @@ ul.news-list {
 ul.honors-list {
     list-style: none;
     padding-left: 0;
+}
+
+/* Publication links styling */
+.pub-content .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+    background: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 15px;
+    text-decoration: none !important;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #1976d2 !important;
+    transition: all 0.2s ease;
+}
+
+.pub-content .links a:hover {
+    background: #bbdefb;
+    color: #0d47a1 !important;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+}
+
+.pub-content .links a i {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
 
 /* Services section styling */
@@ -430,14 +430,6 @@ ul.honors-list {
     text-decoration: none;
 }
 
-.fixed-header .nav-links a.external {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.fixed-header .nav-links a.external:hover {
-    background: rgba(255,255,255,0.2);
-}
 
 .fixed-header .nav-links a i {
     font-size: 0.9em;

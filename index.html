@@ -59,10 +59,10 @@
             }    
             /* Some more styles to beutify this example (85, 129, 212) */
             a {
-                color: rgb(148, 95, 37);
+                color: #2a5298;
             }
             a:hover {
-                color: rgb(9, 67, 17);
+                color: #1e3c72;
             }
             .emph {
                 color: rgb(23, 111, 23) !important;
@@ -86,27 +86,27 @@
         <div class="fixed-header" style="z-index:1000;">
             <nav>
                 <div class="nav-brand">
-                    <i class="fas fa-user-graduate"></i>
+                    <!-- <i class="fas fa-user-graduate"></i> -->
                     Yung-Sung Chuang
                 </div>
                 <div class="nav-links">
-                    <a href="#" title="Back to top">
-                        <i class="fas fa-home"></i>Home
+                    <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank" title="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>Google Scholar
                     </a>
-                    <a href="#talks" title="View my talks and presentations">
-                        <i class="fas fa-microphone"></i>Talks
+                    <a href="files/CV.pdf" target="_blank" title="Download CV">
+                        <i class="fas fa-file-pdf"></i>CV
                     </a>
-                    <a href="#publications" title="Browse my research publications">
-                        <i class="fas fa-book"></i>Publications
+                    <a href="https://twitter.com/YungSungChuang" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>Twitter
                     </a>
-                    <a href="#honors" title="Academic honors and awards">
-                        <i class="fas fa-trophy"></i>Honors
+                    <a href="https://github.com/voidism" target="_blank" title="Github">
+                        <i class="fab fa-github"></i>Github
                     </a>
-                    <a href="#services" title="Professional service activities">
-                        <i class="fas fa-hands-helping"></i>Services
+                    <a href="https://www.linkedin.com/in/yschuang" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>LinkedIn
                     </a>
-                    <a href="https://voidism.github.io/" target="_blank" class="external" title="Visit my personal blog">
-                        <i class="fas fa-external-link-alt"></i>Blog
+                    <a href="https://voidism.github.io/" target="_blank" title="Visit my personal blog">
+                        <i class="fas fa-blog"></i>Blog
                     </a>
                 </div>
             </nav>
@@ -117,7 +117,7 @@
                     <div class="bio-photo">
                         <img src="img/Yung-Sung.jpg" alt="Yung-Sung Chuang">
                         <div class="info-card">
-                            <h5>Yung-Sung Chuang</h5>
+                            <!-- <h5>Yung-Sung Chuang</h5> -->
                             <p class="title">
                                 MIT EECS PhD Student @ CSAIL<br>
                                 Office: 32-G436<br>
@@ -139,23 +139,6 @@
                             </p>
                         </div>
                         
-                        <div class="links">
-                            <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank">
-                                <i class="fas fa-graduation-cap"></i>Google Scholar
-                            </a>
-                            <a href="files/CV.pdf" target="_blank">
-                                <i class="fas fa-file-pdf"></i>CV
-                            </a>
-                            <a href="https://twitter.com/YungSungChuang" target="_blank">
-                                <i class="fab fa-twitter"></i>Twitter
-                            </a>
-                            <a href="https://github.com/voidism" target="_blank">
-                                <i class="fab fa-github"></i>Github
-                            </a>
-                            <a href="https://www.linkedin.com/in/yschuang" target="_blank">
-                                <i class="fab fa-linkedin"></i>Linkedin
-                            </a>
-                        </div>
 
                         <p>
                             I am a fourth-year PhD student working with <a href="https://www.csail.mit.edu/person/jim-glass" target="_blank">Jim Glass</a> at <a href="https://www.csail.mit.edu/" target="_blank">MIT CSAIL</a>. My research focuses on large language models: hallucinations, factuality, and transparency in LLMs. During my internship at Meta FAIR, I also worked on pre-training <a href="https://arxiv.org/abs/2507.22062" target="_blank">MetaCLIP 2</a>, a multilingual vision-language model pre-trained on worldwide web-scale data.
@@ -265,11 +248,21 @@
                                         <b>ICML</b>, 2025.
                                     </div>
                                     <div class="links">
-                                        [<a href="https://selfcite.github.io" target="_blank">blog</a>]
-                                        [<a href="bibs/chuang2025selfcite.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#selfcite_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2502.09604.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/facebookresearch/SelfCite" target="_blank">code</a>]
+                                        <a href="https://selfcite.github.io" target="_blank">
+                                            <i class="fas fa-blog"></i>blog
+                                        </a>
+                                        <a href="bibs/chuang2025selfcite.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#selfcite_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2502.09604.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/facebookresearch/SelfCite" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="selfcite_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -305,10 +298,18 @@
                                         In <a href="https://2024.emnlp.org" target="_blank"><b>The Conference on Empirical Methods in Natural Language Processing</b></a>, 2024.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/chuang2024lookback.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#lookback_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2407.07071.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/voidism/Lookback-Lens" target="_blank">code</a>]
+                                        <a href="bibs/chuang2024lookback.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#lookback_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2407.07071.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/voidism/Lookback-Lens" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="lookback_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -345,10 +346,18 @@
                                             <b>The Twelfth International Conference on Learning Representations (ICLR)</b></a>, 2024.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/chuang2023dola.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#chuang2023dola_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://browse.arxiv.org/pdf/2309.03883.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/voidism/DoLa" target="_blank">code</a>]
+                                        <a href="bibs/chuang2023dola.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#chuang2023dola_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://browse.arxiv.org/pdf/2309.03883.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/voidism/DoLa" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="chuang2023dola_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -382,10 +391,18 @@
                                         arXiv preprint arXiv:2504.13752, 2025.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/cohenwang2025learning.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#at2_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2504.13752.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/MadryLab/AT2" target="_blank">code</a>]
+                                        <a href="bibs/cohenwang2025learning.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#at2_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2504.13752.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/MadryLab/AT2" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="at2_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -433,10 +450,18 @@
                                         arXiv preprint arXiv:2507.22062, 2025.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/chuang2025metaclip2.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#metaclip2_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2507.22062.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/facebookresearch/MetaCLIP" target="_blank">code</a>]
+                                        <a href="bibs/chuang2025metaclip2.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#metaclip2_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2507.22062.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/facebookresearch/MetaCLIP" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="metaclip2_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -473,9 +498,15 @@
                                             <b>The 18th Conference of the European Chapter of the Association for Computational Linguistics: Findings</b></a>, 2024.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/fang2024joint.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#fang2024joint_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://aclanthology.org/2024.findings-eacl.151/" target="_blank">pdf</a>]
+                                        <a href="bibs/fang2024joint.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#fang2024joint_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://aclanthology.org/2024.findings-eacl.151/" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
                                     </div>
                                     <div id="fang2024joint_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -511,10 +542,18 @@
                                             <b>The 61st Annual Meeting of the Association for Computational Linguistics: Findings</b></a>, 2023.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/chuang2023expand.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#chuang2023expand_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2305.17080.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/voidism/EAR" target="_blank">code</a>]
+                                        <a href="bibs/chuang2023expand.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#chuang2023expand_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2305.17080.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/voidism/EAR" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
                                     </div>
                                     <div id="chuang2023expand_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -548,12 +587,24 @@
                                             <b>Findings of the Association for Computational Linguistics: EMNLP</b></a>, 2023.
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/luo2023sail.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#luo2023sail_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2305.15225.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/luohongyin/SAIL" target="_blank">code</a>]
-                                        [<a href="https://huggingface.co/spaces/luohy/SAIL-7B" target="_blank">demo</a>]
-                                        [<a href="https://openlsr.org/sail-7b" target="_blank">web</a>]
+                                        <a href="bibs/luo2023sail.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#luo2023sail_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2305.15225.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/luohongyin/SAIL" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
+                                        <a href="https://huggingface.co/spaces/luohy/SAIL-7B" target="_blank">
+                                            <i class="fas fa-play"></i>demo
+                                        </a>
+                                        <a href="https://openlsr.org/sail-7b" target="_blank">
+                                            <i class="fas fa-globe"></i>web
+                                        </a>
                                     </div>
                                     <div id="luo2023sail_abstract" class="abstract" style="display:none;">
                                         <p>
@@ -594,11 +645,21 @@
                                             <b>Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</b></a>, 2022. <a class="emph"><b> (Oral Paper) </b></a>
                                     </div>
                                     <div class="links">
-                                        [<a href="bibs/chuang2022diffcse.bib" target="_blank" type="text/plain">bib</a>]
-                                        [<a href="#" onclick="$('#chuang2022diffcse_abstract').toggle();return false;">abstract</a>]
-                                        [<a href="https://arxiv.org/pdf/2204.10298.pdf" target="_blank">pdf</a>]
-                                        [<a href="https://github.com/voidism/DiffCSE" target="_blank">code</a>]
-                                        [<a href="https://www.youtube.com/watch?v=9vx-HyzcXtU" target="_blank">video</a>]
+                                        <a href="bibs/chuang2022diffcse.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#chuang2022diffcse_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2204.10298.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/voidism/DiffCSE" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
+                                        <a href="https://www.youtube.com/watch?v=9vx-HyzcXtU" target="_blank">
+                                            <i class="fab fa-youtube"></i>video
+                                        </a>
                                     </div>
                                     <!-- [<a href="https://superbbenchmark.org/" target="_blank">leaderboard</a>] -->
                                     <div id="chuang2022diffcse_abstract" class="abstract" style="display:none;">
