@@ -828,6 +828,19 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                // Mobile header name shortening
+                function updateHeaderName() {
+                    const nameElement = document.querySelector('.nav-brand a');
+                    if (window.innerWidth <= 768) {
+                        nameElement.textContent = 'Yung-Sung';
+                    } else {
+                        nameElement.textContent = 'Yung-Sung Chuang';
+                    }
+                }
+
+                // Initial call and resize listener
+                updateHeaderName();
+                window.addEventListener('resize', updateHeaderName);
                 // Image popup functionality
                 const imageModal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');

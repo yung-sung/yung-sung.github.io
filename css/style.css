@@ -491,19 +491,27 @@ ul.honors-list {
 @media (max-width: 768px) {
     /* Mobile Header Fixes */
     .fixed-header {
-        padding: 10px 0 !important;
+        padding: 8px 0 !important;
     }
     
     .fixed-header nav {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        gap: 8px;
         padding: 8px 15px;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .fixed-header .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    /* Shorten name on mobile */
+    .fixed-header .nav-brand a {
+        font-size: 0.9em;
+        white-space: nowrap;
     }
     
     .fixed-header .nav-links a {
@@ -512,9 +520,38 @@ ul.honors-list {
         border-radius: 15px;
     }
 
-    /* Adjust body padding for mobile header (two rows) */
+    /* Hide text labels on mobile, show only icons */
+    .fixed-header .nav-links a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        text-indent: -9999px;
+        overflow: visible;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        padding: 8px;
+        position: relative;
+    }
+
+    .fixed-header .nav-links a i {
+        text-indent: 0;
+        font-size: 1.2em;
+        opacity: 1;
+    }
+
+    /* Keep citation badge positioned correctly */
+    .citation-badge {
+        text-indent: 0;
+        position: absolute;
+        top: -6px;
+        right: -6px;
+    }
+
+    /* Adjust body padding for mobile header (single row) */
     body {
-        padding-top: 180px !important;
+        padding-top: 70px !important;
     }
 
     /* Container width adjustments */
