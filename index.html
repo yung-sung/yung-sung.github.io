@@ -828,19 +828,49 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Mobile header name shortening
-                function updateHeaderName() {
+                // Mobile header responsive text
+                function updateHeaderText() {
                     const nameElement = document.querySelector('.nav-brand a');
+                    const navLinks = document.querySelectorAll('.nav-links a');
+                    
                     if (window.innerWidth <= 768) {
-                        nameElement.textContent = 'Yung-Sung';
+                        // Mobile: two-line name
+                        nameElement.innerHTML = 'Yung-Sung<br>Chuang';
+                        
+                        // Mobile: labels with line breaks for longer ones
+                        const mobileLabels = ['Google<br>Scholar', 'CV', 'Twitter', 'Github', 'LinkedIn', 'Blog'];
+                        navLinks.forEach((link, index) => {
+                            const icon = link.querySelector('i');
+                            const badge = link.querySelector('.citation-badge');
+                            link.innerHTML = '';
+                            link.appendChild(icon);
+                            if (badge) link.appendChild(badge);
+                            
+                            // Create text element with HTML for line breaks
+                            const textSpan = document.createElement('span');
+                            textSpan.innerHTML = mobileLabels[index];
+                            link.appendChild(textSpan);
+                        });
                     } else {
+                        // Desktop: full name
                         nameElement.textContent = 'Yung-Sung Chuang';
+                        
+                        // Desktop: full labels for nav links
+                        const desktopLabels = ['Google Scholar', 'CV', 'Twitter', 'Github', 'LinkedIn', 'Blog'];
+                        navLinks.forEach((link, index) => {
+                            const icon = link.querySelector('i');
+                            const badge = link.querySelector('.citation-badge');
+                            link.innerHTML = '';
+                            link.appendChild(icon);
+                            if (badge) link.appendChild(badge);
+                            link.appendChild(document.createTextNode(desktopLabels[index]));
+                        });
                     }
                 }
 
                 // Initial call and resize listener
-                updateHeaderName();
-                window.addEventListener('resize', updateHeaderName);
+                updateHeaderText();
+                window.addEventListener('resize', updateHeaderText);
                 // Image popup functionality
                 const imageModal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');

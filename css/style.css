@@ -508,10 +508,14 @@ ul.honors-list {
         justify-content: flex-end;
     }
 
-    /* Shorten name on mobile */
+    /* Two-line name on mobile */
     .fixed-header .nav-brand a {
-        font-size: 0.9em;
-        white-space: nowrap;
+        font-size: 0.85em;
+        line-height: 1.1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .fixed-header .nav-links a {
@@ -520,25 +524,28 @@ ul.honors-list {
         border-radius: 15px;
     }
 
-    /* Hide text labels on mobile, show only icons */
+    /* Icons with small text labels on mobile */
     .fixed-header .nav-links a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0;
-        text-indent: -9999px;
+        gap: 2px;
+        text-indent: 0;
         overflow: visible;
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 60px;
         justify-content: center;
-        padding: 8px;
+        padding: 4px 2px;
         position: relative;
+        font-size: 9px;
+        line-height: 1.1;
+        text-align: center;
     }
 
     .fixed-header .nav-links a i {
-        text-indent: 0;
-        font-size: 1.2em;
+        font-size: 16px;
         opacity: 1;
+        margin-bottom: 2px;
     }
 
     /* Keep citation badge positioned correctly */
