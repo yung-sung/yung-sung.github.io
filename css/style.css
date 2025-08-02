@@ -503,9 +503,10 @@ ul.honors-list {
     }
     
     .fixed-header .nav-links {
-        gap: 8px;
+        gap: min(8px, 1.5vw);
         flex-wrap: nowrap;
         justify-content: flex-end;
+        flex-shrink: 1;
     }
 
     /* Two-line name on mobile */
@@ -532,14 +533,15 @@ ul.honors-list {
         gap: 2px;
         text-indent: 0;
         overflow: visible;
-        width: 55px;
+        width: min(55px, 13vw);
         height: 60px;
         justify-content: center;
         padding: 4px 2px;
         position: relative;
-        font-size: 9px;
+        font-size: min(9px, 2.2vw);
         line-height: 1.1;
         text-align: center;
+        flex-shrink: 1;
     }
 
     .fixed-header .nav-links a i {
@@ -746,6 +748,22 @@ ul.honors-list {
         min-width: 16px;
         height: 16px;
         padding: 1px 4px;
+    }
+}
+
+/* Extra small phones (< 375px) */
+@media (max-width: 374px) {
+    .fixed-header .nav-links {
+        gap: min(4px, 1vw);
+    }
+    
+    .fixed-header .nav-links a {
+        width: min(48px, 12vw);
+        font-size: min(8px, 2vw);
+    }
+    
+    .fixed-header .nav-links a i {
+        font-size: 14px;
     }
 }
 
