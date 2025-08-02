@@ -332,6 +332,23 @@ ul.honors-list {
     margin-bottom: 40px;
 }
 
+/* Attribution section styling */
+.attribution-section {
+    margin-bottom: 30px;
+}
+
+.attribution-card {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #6c757d;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
 .service-category {
     margin-bottom: 25px;
     padding: 20px;
@@ -399,9 +416,18 @@ ul.honors-list {
     gap: 8px;
 }
 
-.fixed-header .nav-brand:hover {
+.fixed-header .nav-brand a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.fixed-header .nav-brand a:hover {
     color: #87ceeb !important;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .fixed-header .nav-links {
@@ -434,6 +460,31 @@ ul.honors-list {
 .fixed-header .nav-links a i {
     font-size: 0.9em;
     opacity: 0.8;
+}
+
+/* Citation count badge */
+.citation-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #2a5298;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1;
+}
+
+.nav-links a[title*="Google Scholar"] {
+    position: relative;
 }
 
 /* Responsive header */
@@ -486,4 +537,78 @@ ul.honors-list {
 
 .image-modal:hover {
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Bib popup modal */
+.bib-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.bib-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    cursor: default;
+}
+
+.bib-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.bib-modal-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.bib-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.bib-modal-close:hover {
+    color: #333;
+    background: #f0f0f0;
+}
+
+.bib-modal-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #444;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+    white-space: pre-wrap;
+    word-break: break-all;
 }

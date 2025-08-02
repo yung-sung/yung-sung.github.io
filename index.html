@@ -59,10 +59,10 @@
             }    
             /* Some more styles to beutify this example (85, 129, 212) */
             a {
-                color: #2a5298;
+                color: #517cc8;
             }
             a:hover {
-                color: #1e3c72;
+                color: #204487;
             }
             .emph {
                 color: rgb(23, 111, 23) !important;
@@ -87,11 +87,14 @@
             <nav>
                 <div class="nav-brand">
                     <!-- <i class="fas fa-user-graduate"></i> -->
-                    Yung-Sung Chuang
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Back to top">
+                        Yung-Sung Chuang
+                    </a>
                 </div>
                 <div class="nav-links">
                     <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank" title="Google Scholar">
                         <i class="fas fa-graduation-cap"></i>Google Scholar
+                        <span class="citation-badge">3046</span>
                     </a>
                     <a href="files/CV.pdf" target="_blank" title="Download CV">
                         <i class="fas fa-file-pdf"></i>CV
@@ -185,6 +188,12 @@
                             Start my summer internship at MIT-IBM Watson AI Lab with <a href="https://mitibmwatsonailab.mit.edu/people/yang-zhang/" target="_blank">Yang Zhang</a>, <a href="https://mitibmwatsonailab.mit.edu/people/shiyu-chang/" target="_blank">Shiyu Chang</a>, <a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a>, <a href="https://scholar.google.com/citations?user=uEpr4C4AAAAJ&hl=en" target="_blank">Kaizhi Qian</a>.
                         </div>
                     </li>
+                    <li class="news-item">
+                        <div class="news-date">09/2021</div>
+                        <div class="news-content">
+                            Start my PhD journey at MIT, Cambridge, MA.
+                        </div>
+                    </li>
                 </ul>
             </div>
             <hr>
@@ -248,9 +257,6 @@
                                         <b>ICML</b>, 2025.
                                     </div>
                                     <div class="links">
-                                        <a href="https://selfcite.github.io" target="_blank">
-                                            <i class="fas fa-blog"></i>blog
-                                        </a>
                                         <a href="bibs/chuang2025selfcite.bib" target="_blank" type="text/plain">
                                             <i class="fas fa-quote-left"></i>bib
                                         </a>
@@ -262,6 +268,9 @@
                                         </a>
                                         <a href="https://github.com/facebookresearch/SelfCite" target="_blank">
                                             <i class="fab fa-github"></i>code
+                                        </a>
+                                        <a href="https://selfcite.github.io" target="_blank">
+                                            <i class="fas fa-globe"></i>web
                                         </a>
                                     </div>
                                     <div id="selfcite_abstract" class="abstract" style="display:none;">
@@ -776,14 +785,10 @@
                 </div>
             </div>
             <hr>
-            <div class="row">
-                <div class="col">
-                    <ul>
-                        <li>
-                            This website is built from the <a href="https://github.com/nelson-liu/website">source code</a> of Nelson F. Liu's awesome website (<a href="https://nelsonliu.me/"
-                            target="_blank">https://nelsonliu.me</a>).
-                        </li>
-                    </ul>
+            <div class="attribution-section">
+                <div class="attribution-card">
+                    <i class="fas fa-code" style="margin-right: 8px; color: #666;"></i>
+                    This website is built from the <a href="https://github.com/nelson-liu/website" target="_blank">source code</a> of Nelson F. Liu's awesome website (<a href="https://nelsonliu.me/" target="_blank">nelsonliu.me</a>).
                 </div>
             </div>
             <footer class="pt-2 my-md-2 pt-md-2 border-top">
@@ -810,34 +815,145 @@
             <img id="modalImage" src="" alt="">
         </div>
 
+        <!-- Bib Modal -->
+        <div id="bibModal" class="bib-modal">
+            <div class="bib-modal-content">
+                <div class="bib-modal-header">
+                    <h3 class="bib-modal-title" id="bibModalTitle">BibTeX Citation</h3>
+                    <button class="bib-modal-close" id="bibModalClose">&times;</button>
+                </div>
+                <div class="bib-modal-text" id="bibModalText"></div>
+            </div>
+        </div>
+
         <script>
-            // Image popup functionality
             document.addEventListener('DOMContentLoaded', function() {
-                const modal = document.getElementById('imageModal');
+                // Image popup functionality
+                const imageModal = document.getElementById('imageModal');
                 const modalImg = document.getElementById('modalImage');
                 const teaserImages = document.querySelectorAll('.pub-teaser img');
 
                 // Add click event to all teaser images
                 teaserImages.forEach(function(img) {
                     img.addEventListener('click', function() {
-                        modal.style.display = 'block';
+                        imageModal.style.display = 'block';
                         modalImg.src = this.src;
                         modalImg.alt = this.alt;
-                        document.body.style.overflow = 'hidden'; // Prevent body scroll
+                        document.body.style.overflow = 'hidden';
                     });
                 });
 
-                // Close modal when clicking anywhere on it
-                modal.addEventListener('click', function() {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto'; // Restore body scroll
+                // Close image modal when clicking anywhere on it
+                imageModal.addEventListener('click', function() {
+                    imageModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 });
 
-                // Close modal with Escape key
-                document.addEventListener('keydown', function(event) {
-                    if (event.key === 'Escape' && modal.style.display === 'block') {
-                        modal.style.display = 'none';
+                // Bib modal functionality
+                const bibModal = document.getElementById('bibModal');
+                const bibModalTitle = document.getElementById('bibModalTitle');
+                const bibModalText = document.getElementById('bibModalText');
+                const bibModalClose = document.getElementById('bibModalClose');
+
+                // Bib content mapping
+                const bibContent = {
+                    'chuang2025selfcite': `@article{chuang2025selfcite,
+  title={SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models},
+  author={Chuang, Yung-Sung and Cohen-Wang, Benjamin and Shen, Shannon Zejiang and Wu, Zhaofeng and Xu, Hu and Lin, Xi Victoria and Glass, James and Li, Shang-Wen and Yih, Wen-tau},
+  journal={arXiv preprint arXiv:2502.09604},
+  year={2025}
+}`,
+                    'chuang2024lookback': `@inproceedings{chuang2024lookback,
+  title={Lookback Lens: Detecting and Mitigating Contextual Hallucinations in Large Language Models Using Only Attention Maps},
+  author={Chuang, Yung-Sung and Qiu, Linlu and Hsieh, Cheng-Yu and Krishna, Ranjay and Kim, Yoon and Glass, James},
+  booktitle={The Conference on Empirical Methods in Natural Language Processing},
+  year={2024}
+}`,
+                    'chuang2023dola': `@inproceedings{chuang2023dola,
+  title={DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models},
+  author={Chuang, Yung-Sung and Xie, Yujia and Luo, Hongyin and Kim, Yoon and Glass, James R and He, Pengcheng},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024}
+}`,
+                    'cohenwang2025learning': `@article{cohenwang2025learning,
+  title={Learning to Attribute with Attention},
+  author={Cohen-Wang, Benjamin and Chuang, Yung-Sung and Madry, Aleksander},
+  journal={arXiv preprint arXiv:2504.13752},
+  year={2025}
+}`,
+                    'chuang2025metaclip2': `@article{chuang2025metaclip2,
+  title={Meta CLIP 2: A Worldwide Scaling Recipe},
+  author={Chuang, Yung-Sung and Li, Yang and Wang, Dong and Yeh, Ching-Feng and Lyu, Kehan and Raghavendra, Ramya and Glass, James and Huang, Lifei and Weston, Jason and Zettlemoyer, Luke and Chen, Xinlei and Liu, Zhuang and Xie, Saining and Yih, Wen-tau and Li, Shang-Wen and Xu, Hu},
+  journal={arXiv preprint arXiv:2507.22062},
+  year={2025}
+}`,
+                    'fang2024joint': `@inproceedings{fang2024joint,
+  title={Joint Inference of Retrieval and Generation for Passage Re-ranking},
+  author={Fang, Wei and Chuang, Yung-Sung and Glass, James},
+  booktitle={The 18th Conference of the European Chapter of the Association for Computational Linguistics: Findings},
+  year={2024}
+}`,
+                    'chuang2023expand': `@inproceedings{chuang2023expand,
+  title={Expand, Rerank, and Retrieve: Query Reranking for Open-Domain Question Answering},
+  author={Chuang, Yung-Sung and Fang, Wei and Li, Shang-Wen and Yih, Wen-tau and Glass, James},
+  booktitle={The 61st Annual Meeting of the Association for Computational Linguistics: Findings},
+  year={2023}
+}`,
+                    'luo2023sail': `@inproceedings{luo2023sail,
+  title={SAIL: Search-Augmented Instruction Learning},
+  author={Luo, Hongyin and Chuang, Yung-Sung and Gong, Yuan and Zhang, Tianhua and Kim, Yoon and Wu, Xixin and Fox, Danny and Meng, Helen and Glass, James},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP},
+  year={2023}
+}`,
+                    'chuang2022diffcse': `@inproceedings{chuang2022diffcse,
+  title={{DiffCSE}: Difference-based Contrastive Learning for Sentence Embeddings},
+  author={Chuang, Yung-Sung and Dangovski, Rumen and Luo, Hongyin and Zhang, Yang and Chang, Shiyu and Soljačić, Marin and Li, Shang-Wen and Yih, Wen-tau and Kim, Yoon and Glass, James},
+  booktitle={Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)},
+  year={2022}
+}`
+                };
+
+                // Add click event to all bib links
+                document.querySelectorAll('a[href*=".bib"]').forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const href = this.getAttribute('href');
+                        const bibKey = href.replace('bibs/', '').replace('.bib', '');
+                        
+                        if (bibContent[bibKey]) {
+                            bibModalTitle.textContent = 'BibTeX Citation';
+                            bibModalText.textContent = bibContent[bibKey];
+                            bibModal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        }
+                    });
+                });
+
+                // Close bib modal when clicking background
+                bibModal.addEventListener('click', function(e) {
+                    if (e.target === bibModal) {
+                        bibModal.style.display = 'none';
                         document.body.style.overflow = 'auto';
+                    }
+                });
+
+                // Close bib modal when clicking X button
+                bibModalClose.addEventListener('click', function() {
+                    bibModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+
+                // Close modals with Escape key
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        if (imageModal.style.display === 'block') {
+                            imageModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
+                        if (bibModal.style.display === 'block') {
+                            bibModal.style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
                     }
                 });
             });
