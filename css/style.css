@@ -624,14 +624,16 @@ ul.honors-list {
 
     /* Honors Section - Mobile Layout */
     .honor-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        flex-direction: row;
+        text-align: left;
+        gap: 12px;
         padding: 12px;
+        align-items: flex-start;
     }
 
     .honor-icon {
-        font-size: 1.5em;
+        font-size: 1.2em;
+        flex-shrink: 0;
     }
 
     /* Services Section - Mobile Layout */
