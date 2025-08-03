@@ -229,7 +229,7 @@ ul.talks-list {
     padding: 12px;
     background: #f8f9fa;
     border-radius: 6px;
-    border-left: 3px solid #28a745;
+    border-left: 3px solid #0385bd;
     list-style: none;
 }
 
@@ -237,7 +237,7 @@ ul.talks-list {
     flex-shrink: 0;
     font-weight: bold;
     font-size: 0.85em;
-    color: #28a745;
+    color: #0385bd;
     min-width: 75px;
 }
 
@@ -265,7 +265,7 @@ ul.news-list {
     padding: 15px;
     background: #fff7e6;
     border-radius: 8px;
-    border-left: 4px solid #ffa500;
+    border-left: 4px solid #bf7c01;
     list-style: none;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
@@ -352,15 +352,15 @@ ul.honors-list {
 .service-category {
     margin-bottom: 25px;
     padding: 20px;
-    background: #f0f8ff;
+    background: #f0fff6;
     border-radius: 8px;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid #378624;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .service-category h4 {
     margin: 0 0 12px 0;
-    color: #007bff;
+    color: #0e8714;
     font-size: 1.1em;
     display: flex;
     align-items: center;
@@ -379,12 +379,12 @@ ul.honors-list {
 }
 
 .service-venue {
-    background: #e3f2fd;
+    background: #e7fde3;
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.9em;
-    color: #1976d2;
-    border: 1px solid #bbdefb;
+    color: #209462;
+    border: 1px solid #71c171;
 }
 
 /* Modern Header Styling */
@@ -467,7 +467,7 @@ ul.honors-list {
     position: absolute;
     top: -8px;
     right: -10px;
-    background: #2a5298;
+    background: #be3333;
     color: white;
     font-size: 11px;
     font-weight: bold;
@@ -661,7 +661,7 @@ ul.honors-list {
         min-width: auto;
         font-size: 0.8em;
         font-weight: bold;
-        color: #28a745;
+        color: #0385bd;
     }
 
     .news-content {

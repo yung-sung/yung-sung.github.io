@@ -27,6 +27,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="citations/scholar.js"></script>
         <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
         <style>
             /* Add some padding on document's body to prevent the content
@@ -94,7 +95,7 @@
                 <div class="nav-links">
                     <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank" title="Google Scholar">
                         <i class="fas fa-graduation-cap"></i>Google Scholar
-                        <span class="citation-badge">3046</span>
+                        <span class="citation-badge" id="citationBadge">...</span>
                     </a>
                     <a href="files/CV.pdf" target="_blank" title="Download CV">
                         <i class="fas fa-file-pdf"></i>CV
@@ -828,6 +829,23 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                // Load citation count from external JS file
+                function loadCitationCount() {
+                    const badgeElement = document.getElementById('citationBadge');
+                    if (!badgeElement) return;
+                    
+                    // citationData is loaded from citations/scholar.js
+                    if (typeof citationData !== 'undefined' && citationData && typeof citationData.citations === 'number') {
+                        badgeElement.textContent = citationData.citations.toString();
+                        console.log(`Citation count: ${citationData.citations} (last updated: ${citationData.date})`);
+                    } else {
+                        console.error('Citation data not loaded or invalid format');
+                        badgeElement.textContent = '?';
+                    }
+                }
+
+                // Load citation count on page load
+                loadCitationCount();
                 // Mobile header responsive text
                 function updateHeaderText() {
                     const nameElement = document.querySelector('.nav-brand a');
