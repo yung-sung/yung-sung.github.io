@@ -29,6 +29,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="citations/scholar.js"></script>
         <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <style>
             /* Add some padding on document's body to prevent the content
             to go underneath the header and footer */
@@ -94,7 +95,7 @@
                 </div>
                 <div class="nav-links">
                     <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank" title="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>Google Scholar
+                        <i class="ai ai-google-scholar"></i>Google Scholar
                         <span class="citation-badge" id="citationBadge">...</span>
                     </a>
                     <a href="files/CV.pdf" target="_blank" title="Download CV">
@@ -139,7 +140,7 @@
                                 Last name: Chuang (莊) → pronounced as "jwang"<br>
                                 </br>
                                 <audio controls>
-                                    <source src="files/name-tts.mp3" type="audio/mpeg">
+                                    <source src="files/name-tts-long.mp3" type="audio/mpeg">
                                 </audio>
                             </p>
                         </div>
@@ -151,7 +152,7 @@
                             My research has introduced several approaches for improving LLM factuality. <a href="https://arxiv.org/abs/2309.03883" target="_blank">DoLa</a> enhances factuality through layer-wise knowledge contrasting during decoding. <a href="https://arxiv.org/abs/2407.07071" target="_blank">Lookback Lens</a> detects and mitigates hallucinations by analyzing attention patterns. Most recently, <a href="https://arxiv.org/abs/2502.09604" target="_blank">SelfCite</a> enables LLMs to generate citations without external supervision. I also used to work on retrieval-based methods, developing <a href="https://arxiv.org/abs/2204.10298" target="_blank">DiffCSE</a> for better sentence embeddings and <a href="https://arxiv.org/abs/2305.17080" target="_blank">Query Reranking</a> for more accurate passage retrieval.
                         </p>
                         <p>
-                            Before MIT, I conducted research in speech processing and NLP with <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html">Hung-Yi Lee</a> and <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung Chen</a> at National Taiwan University, where I obtained my B.S. degree in Electrical Engineering in 2020.
+                            Before MIT, I conducted research in speech processing and NLP with <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html">Hung-Yi Lee</a>, <a href="https://www.csie.ntu.edu.tw/~yvchen/">Yun-Nung Chen</a>, and <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm">Lin-shan Lee</a> at National Taiwan University, where I obtained my B.S. degree in Electrical Engineering in 2020.
                         </p>
                     </div>
                 </div>
@@ -214,7 +215,7 @@
                                         MIT CSAIL: EI Seminar, April 24, 2025
                                     </div>
                                     <div class="description">
-                                        A comprehensive overview of my research on reducing hallucinations in large language models through three key approaches: improved decoding strategies (DoLa), detection methods (Lookback Lens), and citation generation (SelfCite).
+                                        A comprehensive overview of my research on reducing hallucinations in large language models through three key approaches: improved decoding strategies (<a href="https://arxiv.org/abs/2309.03883" target="_blank">DoLa</a>), detection methods (<a href="https://arxiv.org/abs/2407.07071" target="_blank">Lookback Lens</a>), and citation generation (<a href="https://arxiv.org/abs/2502.09604" target="_blank">SelfCite</a>).
                                     </div>
                                 </div>
                             </div>
@@ -223,12 +224,72 @@
                     <p><i>For my other talks at conferences, please see <a href="https://www.youtube.com/@yung-sung" target="_blank">https://www.youtube.com/@yung-sung</a></i></p>
                 </div>
             </div>
-                    
+            
             <br/>
             <div class="row" id="publications">
                 <div class="col">
                     <h2>Selected Publications</h2>
                     <p><i>For a full list of papers, see my <a href="https://scholar.google.com/citations?hl=en&user=3ar1DOwAAAAJ" target="_blank">Google Scholar</a>.</i></p>
+                    
+                    <h3> Multi-modal Large-scale Pre-training </h3>
+
+                    <ul class="pl">
+                        <li>
+                            <div class="pub-item">
+                                <div class="pub-teaser">
+                                    <img src="teaser/metaclip2.jpg" alt="MetaCLIP 2 teaser">
+                                </div>
+                                <div class="pub-content">
+                                    <h4>
+                                        <a href="https://arxiv.org/abs/2507.22062" target="_blank">
+                                            <b>MetaCLIP 2: A Worldwide Scaling Recipe</b>
+                                        </a>
+                                    </h4>
+                                    <div class="authors">
+                                        <b>Yung-Sung Chuang</b>,
+                                        Yang Li,
+                                        Dong Wang,
+                                        <a href="https://scholar.google.com/citations?user=P7ma7pAAAAAJ&hl=en" target="_blank">Ching-Feng Yeh</a>,
+                                        Kehan Lyu,
+                                        Ramya Raghavendra,
+                                        <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
+                                        Lifei Huang,
+                                        <a href="https://scholar.google.com/citations?user=lMkTx0EAAAAJ&hl=en" target="_blank">Jason Weston</a>,
+                                        <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>,
+                                        <a href="https://xinleic.xyz/" target="_blank">Xinlei Chen</a>,
+                                        <a href="https://liuzhuang13.github.io/" target="_blank">Zhuang Liu</a>,
+                                        <a href="https://www.sainingxie.com/" target="_blank">Saining Xie</a>,
+                                        <a href="https://scottyih.org/" target="_blank">Wen-tau Yih</a>,
+                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
+                                        <a href="https://howardhsu.github.io/" target="_blank">Hu Xu</a>
+                                    </div>
+                                    <div class="venue">
+                                        arXiv preprint arXiv:2507.22062, 2025.
+                                    </div>
+                                    <div class="links">
+                                        <a href="bibs/chuang2025metaclip2.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#metaclip2_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2507.22062.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/facebookresearch/MetaCLIP" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
+                                    </div>
+                                    <div id="metaclip2_abstract" class="abstract" style="display:none;">
+                                        <p>
+                                            Contrastive Language-Image Pretraining (CLIP) is a popular foundation model, supporting from zero-shot classification, retrieval to encoders for multimodal large language models (MLLMs). Although CLIP is successfully trained on billion-scale image-text pairs from the English world, scaling CLIP's training further to learning from the worldwide web data is still challenging: (1) no curation method is available to handle data points from non-English world; (2) the English performance from existing multilingual CLIP is worse than its English-only counterpart, i.e., "curse of multilinguality" that is common in LLMs. Here, we present Meta CLIP 2, the first recipe training CLIP from scratch on worldwide web-scale image-text pairs. To generalize our findings, we conduct rigorous ablations with minimal changes that are necessary to address the above challenges and present a recipe enabling mutual benefits from English and non-English world data. In zero-shot ImageNet classification, Meta CLIP 2 ViT-H/14 surpasses its English-only counterpart by 0.8% and mSigLIP by 0.7%, and surprisingly sets new state-of-the-art without system-level confounding factors (e.g., translation, bespoke architecture changes) on multilingual benchmarks, such as CVQA with 57.4%, Babel-ImageNet with 50.2% and XM3600 with 64.3% on image-to-text retrieval.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
                     <h3> Factuality & Transparency</h3>
                     <ul class="pl">
                         <li>
@@ -423,65 +484,6 @@
                             </div>
                         </li>
                     </ul>
-
-                    <h3> Multi-modal Large-scale Pre-training </h3>
-
-                    <ul class="pl">
-                        <li>
-                            <div class="pub-item">
-                                <div class="pub-teaser">
-                                    <img src="teaser/metaclip2.jpg" alt="MetaCLIP 2 teaser">
-                                </div>
-                                <div class="pub-content">
-                                    <h4>
-                                        <a href="https://arxiv.org/abs/2507.22062" target="_blank">
-                                            <b>MetaCLIP 2: A Worldwide Scaling Recipe</b>
-                                        </a>
-                                    </h4>
-                                    <div class="authors">
-                                        <b>Yung-Sung Chuang</b>,
-                                        Yang Li,
-                                        Dong Wang,
-                                        <a href="https://scholar.google.com/citations?user=P7ma7pAAAAAJ&hl=en" target="_blank">Ching-Feng Yeh</a>,
-                                        Kehan Lyu,
-                                        Ramya Raghavendra,
-                                        <a href="http://people.csail.mit.edu/jrg/" target="_blank">James Glass</a>,
-                                        Lifei Huang,
-                                        <a href="https://scholar.google.com/citations?user=lMkTx0EAAAAJ&hl=en" target="_blank">Jason Weston</a>,
-                                        <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Luke Zettlemoyer</a>,
-                                        <a href="https://xinleic.xyz/" target="_blank">Xinlei Chen</a>,
-                                        <a href="https://liuzhuang13.github.io/" target="_blank">Zhuang Liu</a>,
-                                        <a href="https://www.sainingxie.com/" target="_blank">Saining Xie</a>,
-                                        <a href="https://scottyih.org/" target="_blank">Wen-tau Yih</a>,
-                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
-                                        <a href="https://howardhsu.github.io/" target="_blank">Hu Xu</a>
-                                    </div>
-                                    <div class="venue">
-                                        arXiv preprint arXiv:2507.22062, 2025.
-                                    </div>
-                                    <div class="links">
-                                        <a href="bibs/chuang2025metaclip2.bib" target="_blank" type="text/plain">
-                                            <i class="fas fa-quote-left"></i>bib
-                                        </a>
-                                        <a href="#" onclick="$('#metaclip2_abstract').toggle();return false;">
-                                            <i class="fas fa-align-left"></i>abstract
-                                        </a>
-                                        <a href="https://arxiv.org/pdf/2507.22062.pdf" target="_blank">
-                                            <i class="fas fa-file-pdf"></i>pdf
-                                        </a>
-                                        <a href="https://github.com/facebookresearch/MetaCLIP" target="_blank">
-                                            <i class="fab fa-github"></i>code
-                                        </a>
-                                    </div>
-                                    <div id="metaclip2_abstract" class="abstract" style="display:none;">
-                                        <p>
-                                            Contrastive Language-Image Pretraining (CLIP) is a popular foundation model, supporting from zero-shot classification, retrieval to encoders for multimodal large language models (MLLMs). Although CLIP is successfully trained on billion-scale image-text pairs from the English world, scaling CLIP's training further to learning from the worldwide web data is still challenging: (1) no curation method is available to handle data points from non-English world; (2) the English performance from existing multilingual CLIP is worse than its English-only counterpart, i.e., "curse of multilinguality" that is common in LLMs. Here, we present Meta CLIP 2, the first recipe training CLIP from scratch on worldwide web-scale image-text pairs. To generalize our findings, we conduct rigorous ablations with minimal changes that are necessary to address the above challenges and present a recipe enabling mutual benefits from English and non-English world data. In zero-shot ImageNet classification, Meta CLIP 2 ViT-H/14 surpasses its English-only counterpart by 0.8% and mSigLIP by 0.7%, and surprisingly sets new state-of-the-art without system-level confounding factors (e.g., translation, bespoke architecture changes) on multilingual benchmarks, such as CVQA with 57.4%, Babel-ImageNet with 50.2% and XM3600 with 64.3% on image-to-text retrieval.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                     
                     <h3> Retrieval-based Methods </h3>
                     
@@ -516,6 +518,9 @@
                                         </a>
                                         <a href="https://aclanthology.org/2024.findings-eacl.151/" target="_blank">
                                             <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/wfangtw/jpr" target="_blank">
+                                            <i class="fab fa-github"></i>code
                                         </a>
                                     </div>
                                     <div id="fang2024joint_abstract" class="abstract" style="display:none;">
@@ -671,7 +676,6 @@
                                             <i class="fab fa-youtube"></i>video
                                         </a>
                                     </div>
-                                    <!-- [<a href="https://superbbenchmark.org/" target="_blank">leaderboard</a>] -->
                                     <div id="chuang2022diffcse_abstract" class="abstract" style="display:none;">
                                         <p>
                                             We propose DiffCSE, an unsupervised contrastive learning framework for learning sentence embeddings. DiffCSE learns sentence embeddings that are sensitive to the difference between the original sentence and an edited sentence, where the edited sentence is obtained by stochastically masking out the original sentence and then sampling from a masked language model. We show that DiffSCE is an instance of equivariant contrastive learning (Dangovski et al., 2021), which generalizes contrastive learning and learns representations that are insensitive to certain types of augmentations and sensitive to other "harmful" types of augmentations. Our experiments show that DiffCSE achieves state-of-the-art results among unsupervised sentence representation learning methods, outperforming unsupervised SimCSE by 2.3 absolute points on semantic textual similarity tasks.
@@ -684,6 +688,99 @@
                     
                     <h3> Speech Processing </h3>
                     <ul class="pl">
+                        <li>
+                            <div class="pub-item">
+                                <div class="pub-teaser">
+                                    <img src="teaser/dual.jpg" alt="DUAL teaser">
+                                </div>
+                                <div class="pub-content">
+                                    <h4>
+                                        <a href="https://arxiv.org/abs/2203.04911" target="_blank">
+                                            <b>DUAL: Discrete Spoken Unit Adaptive Learning for Textless Spoken Question Answering</b>
+                                        </a>
+                                    </h4>
+                                    <div class="authors">
+                                        <a href="https://daniellin94144.github.io/" target="_blank">Guan-Ting Lin</a>, 
+                                        <b>Yung-Sung Chuang</b>, 
+                                        <a href="https://github.com/voidful" target="_blank">Ho-Lam Chung</a>, 
+                                        <a href="https://scholar.google.com.tw/citations?user=R1mNI8QAAAAJ" target="_blank">Shu-wen Yang</a>, 
+                                        <a href="#">Hsuan-Jui Chen</a>, 
+                                        <a href="https://www.amazon.science/author/shuyan-dong" target="_blank">Shuyan Dong</a>, 
+                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>, 
+                                        <a href="http://www.cs.toronto.edu/~asamir/" target="_blank">Abdelrahman Mohamed</a>, 
+                                        <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html" target="_blank">Hung-yi Lee</a>, 
+                                        <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm" target="_blank">Lin-shan Lee</a>
+                                    </div>
+                                    <div class="venue">
+                                        In <a href="https://www.interspeech2022.org/" target="_blank">
+                                            <b>Interspeech</b></a>, 2022.
+                                    </div>
+                                    <div class="links">
+                                        <a href="bibs/lin2022dual.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#dual_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2203.04911.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                    </div>
+                                    <div id="dual_abstract" class="abstract" style="display:none;">
+                                        <p>
+                                            Spoken Question Answering (SQA) is to find the answer from a spoken document given a question, which is crucial for personal assistants when replying to the queries from the users. Existing SQA methods all rely on Automatic Speech Recognition (ASR) transcripts. Not only does ASR need to be trained with massive annotated data that are time and cost-prohibitive to collect for low-resourced languages, but more importantly, very often the answers to the questions include name entities or out-of-vocabulary words that cannot be recognized correctly. Also, ASR aims to minimize recognition errors equally over all words, including many function words irrelevant to the SQA task. Therefore, SQA without ASR transcripts (textless) is always highly desired, although known to be very difficult. This work proposes Discrete Spoken Unit Adaptive Learning (DUAL), leveraging unlabeled data for pre-training and fine-tuned by the SQA downstream task. The time intervals of spoken answers can be directly predicted from spoken documents. We also release a new SQA benchmark corpus, NMSQA, for data with more realistic scenarios. We empirically showed that DUAL yields results comparable to those obtained by cascading ASR and text QA model and robust to real-world data. Our code and model will be open-sourced.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pub-item">
+                                <div class="pub-teaser">
+                                    <img src="teaser/semi_supervised.jpg" alt="Semi-Supervised Spoken Language Understanding teaser">
+                                </div>
+                                <div class="pub-content">
+                                    <h4>
+                                        <a href="https://arxiv.org/abs/2010.13826" target="_blank">
+                                            <b>Semi-Supervised Spoken Language Understanding via Self-Supervised Speech and Language Model Pretraining</b>
+                                        </a>
+                                    </h4>
+                                    <div class="authors">
+                                        <a href="http://people.csail.mit.edu/clai24/" target="_blank">Cheng-I Lai</a>,
+                                        <b>Yung-Sung Chuang</b>,
+                                        <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html" target="_blank">Hung-Yi Lee</a>,
+                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
+                                        <a href="https://www.csail.mit.edu/person/jim-glass" target="_blank">James Glass</a>
+                                    </div>
+                                    <div class="venue">
+                                        In <a href="https://2021.ieeeicassp.org/" target="_blank">
+                                            <b>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</b></a>, 2021.
+                                    </div>
+                                    <div class="links">
+                                        <a href="bibs/lai2020semi.bib" target="_blank" type="text/plain">
+                                            <i class="fas fa-quote-left"></i>bib
+                                        </a>
+                                        <a href="#" onclick="$('#semi_supervised_abstract').toggle();return false;">
+                                            <i class="fas fa-align-left"></i>abstract
+                                        </a>
+                                        <a href="https://arxiv.org/pdf/2010.13826.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>pdf
+                                        </a>
+                                        <a href="https://github.com/jefflai108/Semi-Supervsied-Spoken-Language-Understanding-PyTorch" target="_blank">
+                                            <i class="fab fa-github"></i>code
+                                        </a>
+                                        <a href="https://www.youtube.com/watch?v=5GOIPp9hWkY" target="_blank">
+                                            <i class="fab fa-youtube"></i>video
+                                        </a>
+                                    </div>
+                                    <div id="semi_supervised_abstract" class="abstract" style="display:none;">
+                                        <p>
+                                            Much recent work on Spoken Language Understanding (SLU) is limited in at least one of three ways: models were trained on oracle text input and neglected ASR errors, models were trained to predict only intents without the slot values, or models were trained on a large amount of in-house data. In this paper, we propose a clean and general framework to learn semantics directly from speech with semi-supervision from transcribed or untranscribed speech to address these issues. Our framework is built upon pretrained end-to-end (E2E) ASR and self-supervised language models, such as BERT, and fine-tuned on a limited amount of target SLU data. We study two semi-supervised settings for the ASR component: supervised pretraining on transcribed speech, and unsupervised pretraining by replacing the ASR encoder with self-supervised speech representations, such as wav2vec. In parallel, we identify two essential criteria for evaluating SLU models: environmental noise-robustness and E2E semantics evaluation. Experiments on ATIS show that our SLU framework with speech as input can perform on par with those using oracle text as input in semantics understanding, even though environmental noise is present and a limited amount of labeled semantics data is available for training.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li>
                             <div class="pub-item">
                                 <div class="pub-teaser">
@@ -739,6 +836,9 @@
                                         </a>
                                     </div>
                                     <div id="superb_abstract" class="abstract" style="display:none;">
+                                        <p>
+                                            The foundation model paradigm leverages a shared foundation model to achieve state-of-the-art (SOTA) performance for various tasks, requiring minimal downstream-specific data collection and modeling. This approach has proven crucial in the field of Natural Language Processing (NLP). However, the speech processing community lacks a similar setup to explore the paradigm systematically. To bridge this gap, we establish the Speech processing Universal PERformance Benchmark (SUPERB). SUPERB represents an ecosystem designed to evaluate foundation models across a wide range of speech processing tasks, facilitating the sharing of results on an online leaderboard and fostering collaboration through a community-driven benchmark database that aids in new development cycles. We present a unified learning framework for solving the speech processing tasks in SUPERB with the frozen foundation model followed by task-specialized lightweight prediction heads. Combining our results with community submissions, we verify that the framework is simple yet effective, as the best-performing foundation model shows competitive generalizability across most SUPERB tasks. Finally, we conduct a series of analyses to offer an in-depth understanding of SUPERB and speech foundation models, including information flows across tasks inside the models and the statistical significance and robustness of the benchmark.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -783,93 +883,6 @@
                                         <p>
                                             While various end-to-end models for spoken language understanding tasks have been explored recently, this paper is probably the first known attempt to challenge the very difficult task of end-to-end spoken question answering (SQA). Learning from the very successful BERT model for various text processing tasks, here we proposed an audio-and-text jointly learned SpeechBERT model. This model outperformed the conventional approach of cascading ASR with the following text question answering (TQA) model on datasets including ASR errors in answer spans, because the end-to-end model was shown to be able to extract information out of audio data before ASR produced errors. When ensembling the proposed end-to-end model with the cascade architecture, even better performance was achieved. In addition to the potential of end-to-end SQA, the SpeechBERT can also be considered for many other spoken language understanding tasks just as BERT for many text processing tasks.
                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="pub-item">
-                                <div class="pub-teaser">
-                                    <img src="teaser/dual.jpg" alt="DUAL teaser">
-                                </div>
-                                <div class="pub-content">
-                                    <h4>
-                                        <a href="https://arxiv.org/abs/2203.04911" target="_blank">
-                                            <b>DUAL: Discrete Spoken Unit Adaptive Learning for Textless Spoken Question Answering</b>
-                                        </a>
-                                    </h4>
-                                    <div class="authors">
-                                        <a href="https://daniellin94144.github.io/" target="_blank">Guan-Ting Lin</a>, 
-                                        <b>Yung-Sung Chuang</b>, 
-                                        <a href="https://github.com/voidful" target="_blank">Ho-Lam Chung</a>, 
-                                        <a href="https://scholar.google.com.tw/citations?user=R1mNI8QAAAAJ" target="_blank">Shu-wen Yang</a>, 
-                                        <a href="#">Hsuan-Jui Chen</a>, 
-                                        <a href="https://www.amazon.science/author/shuyan-dong" target="_blank">Shuyan Dong</a>, 
-                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>, 
-                                        <a href="http://www.cs.toronto.edu/~asamir/" target="_blank">Abdelrahman Mohamed</a>, 
-                                        <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html" target="_blank">Hung-yi Lee</a>, 
-                                        <a href="https://speech.ee.ntu.edu.tw/previous_version/lslNew.htm" target="_blank">Lin-shan Lee</a>
-                                    </div>
-                                    <div class="venue">
-                                        In <a href="https://www.interspeech2022.org/" target="_blank">
-                                            <b>Interspeech</b></a>, 2022.
-                                    </div>
-                                    <div class="links">
-                                        <a href="bibs/lin2022dual.bib" target="_blank" type="text/plain">
-                                            <i class="fas fa-quote-left"></i>bib
-                                        </a>
-                                        <a href="#" onclick="$('#dual_abstract').toggle();return false;">
-                                            <i class="fas fa-align-left"></i>abstract
-                                        </a>
-                                        <a href="https://arxiv.org/pdf/2203.04911.pdf" target="_blank">
-                                            <i class="fas fa-file-pdf"></i>pdf
-                                        </a>
-                                    </div>
-                                    <div id="dual_abstract" class="abstract" style="display:none;">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="pub-item">
-                                <div class="pub-teaser">
-                                    <img src="teaser/semi_supervised.jpg" alt="Semi-Supervised Spoken Language Understanding teaser">
-                                </div>
-                                <div class="pub-content">
-                                    <h4>
-                                        <a href="https://arxiv.org/abs/2010.13826" target="_blank">
-                                            <b>Semi-Supervised Spoken Language Understanding via Self-Supervised Speech and Language Model Pretraining</b>
-                                        </a>
-                                    </h4>
-                                    <div class="authors">
-                                        <a href="http://people.csail.mit.edu/clai24/" target="_blank">Cheng-I Lai</a>,
-                                        <b>Yung-Sung Chuang</b>,
-                                        <a href="https://speech.ee.ntu.edu.tw/~hylee/index.html" target="_blank">Hung-Yi Lee</a>,
-                                        <a href="https://swdanielli.github.io/" target="_blank">Shang-Wen Li</a>,
-                                        <a href="https://www.csail.mit.edu/person/jim-glass" target="_blank">James Glass</a>
-                                    </div>
-                                    <div class="venue">
-                                        In <a href="https://2021.ieeeicassp.org/" target="_blank">
-                                            <b>IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</b></a>, 2021.
-                                    </div>
-                                    <div class="links">
-                                        <a href="bibs/lai2020semi.bib" target="_blank" type="text/plain">
-                                            <i class="fas fa-quote-left"></i>bib
-                                        </a>
-                                        <a href="#" onclick="$('#semi_supervised_abstract').toggle();return false;">
-                                            <i class="fas fa-align-left"></i>abstract
-                                        </a>
-                                        <a href="https://arxiv.org/pdf/2010.13826.pdf" target="_blank">
-                                            <i class="fas fa-file-pdf"></i>pdf
-                                        </a>
-                                        <a href="https://github.com/jefflai108/Semi-Supervsied-Spoken-Language-Understanding-PyTorch" target="_blank">
-                                            <i class="fab fa-github"></i>code
-                                        </a>
-                                        <a href="https://www.youtube.com/watch?v=5GOIPp9hWkY" target="_blank">
-                                            <i class="fab fa-youtube"></i>video
-                                        </a>
-                                    </div>
-                                    <div id="semi_supervised_abstract" class="abstract" style="display:none;">
                                     </div>
                                 </div>
                             </div>
@@ -1195,6 +1208,30 @@
   author={Chuang, Yung-Sung and Dangovski, Rumen and Luo, Hongyin and Zhang, Yang and Chang, Shiyu and Soljačić, Marin and Li, Shang-Wen and Yih, Wen-tau and Kim, Yoon and Glass, James},
   booktitle={Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)},
   year={2022}
+}`,
+                    'yang2021superb': `@article{yang2021superb,
+  title={SUPERB: Speech processing Universal PERformance Benchmark},
+  author={Yang, Shu-wen and Chi, Po-Han and Chuang, Yung-Sung and Lai, Cheng-I Jeff and Lakhotia, Kushal and Lin, Yist Y. and Liu, Andy T. and Shi, Jiatong and Chang, Xuankai and Lin, Guan-Ting and Huang, Tzu-Hsien and Tseng, Wei-Cheng and Lee, Ko-tik and Liu, Da-Rong and Huang, Zili and Dong, Shuyan and Li, Shang-Wen and Watanabe, Shinji and Mohamed, Abdelrahman and Lee, Hung-yi},
+  journal={arXiv preprint arXiv:2105.01051},
+  year={2021}
+}`,
+                    'chuang2020speechbert': `@inproceedings{chuang2020speechbert,
+  title={SpeechBERT: An Audio-and-text Jointly Learned Language Model for End-to-end Spoken Question Answering},
+  author={Chuang, Yung-Sung and Liu, Chi-Liang and Lee, Hung-yi and Lee, Lin-shan},
+  booktitle={Interspeech},
+  year={2020}
+}`,
+                    'lin2022dual': `@inproceedings{lin2022dual,
+  title={DUAL: Discrete Spoken Unit Adaptive Learning for Textless Spoken Question Answering},
+  author={Lin, Guan-Ting and Chuang, Yung-Sung and Chung, Ho-Lam and Yang, Shu-wen and Chen, Hsuan-Jui and Dong, Shuyan and Li, Shang-Wen and Mohamed, Abdelrahman and Lee, Hung-yi and Lee, Lin-shan},
+  booktitle={Interspeech},
+  year={2022}
+}`,
+                    'lai2020semi': `@inproceedings{lai2020semi,
+  title={Semi-Supervised Spoken Language Understanding via Self-Supervised Speech and Language Model Pretraining},
+  author={Lai, Cheng-I and Chuang, Yung-Sung and Lee, Hung-Yi and Li, Shang-Wen and Glass, James},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2021}
 }`
                 };
 

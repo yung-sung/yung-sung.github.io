@@ -445,16 +445,24 @@ ul.honors-list {
 }
 
 #publications h3:before {
-    content: '▼ ';
-    font-size: 0.9em;
-    color: #666;
-    margin-right: 8px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #666;
+    margin-right: 12px;
     display: inline-block;
     transition: transform 0.3s ease;
+    vertical-align: middle;
+    margin-top: -2px;
 }
 
 #publications h3.collapsed:before {
-    content: '▶ ';
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #666;
+    border-right: none;
     transform: rotate(0deg);
 }
 
@@ -597,6 +605,10 @@ ul.honors-list {
     opacity: 0.8;
 }
 
+.fixed-header .nav-links a i.ai-google-scholar {
+    font-size: 1.2em;
+}
+
 /* Citation count badge */
 .citation-badge {
     position: absolute;
@@ -683,6 +695,10 @@ ul.honors-list {
         font-size: 16px;
         opacity: 1;
         margin-bottom: 2px;
+    }
+
+    .fixed-header .nav-links a i.ai-google-scholar {
+        font-size: 18px;
     }
 
     /* Keep citation badge positioned correctly */
@@ -943,8 +959,9 @@ ul.honors-list {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    backdrop-filter: blur(3px);
 }
 
 .bib-modal-content {
@@ -952,58 +969,80 @@ ul.honors-list {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    max-width: 600px;
+    background: #1e1e1e;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    max-width: 800px;
     width: 90%;
     max-height: 80%;
-    overflow-y: auto;
+    overflow: hidden;
     cursor: default;
+    border: 1px solid #333;
 }
 
 .bib-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f0f0;
+    display: none;
 }
 
 .bib-modal-title {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
+    display: none;
 }
 
 .bib-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background: none;
     border: none;
-    font-size: 1.5em;
-    color: #999;
+    font-size: 1.2em;
+    color: #888;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
     border-radius: 4px;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 .bib-modal-close:hover {
-    color: #333;
-    background: #f0f0f0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .bib-modal-text {
-    font-family: 'Courier New', monospace;
-    font-size: 0.9em;
-    line-height: 1.4;
-    color: #444;
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 6px;
-    border-left: 4px solid #007bff;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.85em;
+    line-height: 1.6;
+    color: #d4d4d4;
+    background: #1e1e1e;
+    padding: 25px 30px;
+    border-radius: 8px;
     white-space: pre-wrap;
-    word-break: break-all;
+    word-break: break-word;
+    overflow-y: auto;
+    max-height: 80vh;
+    position: relative;
+}
+
+/* Custom scrollbar for bib modal */
+.bib-modal-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bib-modal-text::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.bib-modal-text::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.bib-modal-text::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }
