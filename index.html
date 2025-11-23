@@ -27,7 +27,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="citations/scholar.js"></script>
         <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         <style>
@@ -264,7 +263,7 @@
                                         <a href="https://howardhsu.github.io/" target="_blank">Hu Xu</a>
                                     </div>
                                     <div class="venue">
-                                        arXiv preprint arXiv:2507.22062, 2025.
+                                        To appear at NeurIPS 2025. <a class="emph"><b> (Spotlight Paper) </b></a>
                                     </div>
                                     <div class="links">
                                         <a href="bibs/chuang2025metaclip2.bib" target="_blank" type="text/plain">
@@ -1033,17 +1032,27 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Load citation count from external JS file
-                function loadCitationCount() {
+                // Load citation count from remote JSON API
+                async function loadCitationCount() {
                     const badgeElement = document.getElementById('citationBadge');
                     if (!badgeElement) return;
                     
-                    // citationData is loaded from citations/scholar.js
-                    if (typeof citationData !== 'undefined' && citationData && typeof citationData.citations === 'number') {
-                        badgeElement.textContent = citationData.citations.toString();
-                        console.log(`Citation count: ${citationData.citations} (last updated: ${citationData.date})`);
-                    } else {
-                        console.error('Citation data not loaded or invalid format');
+                    try {
+                        const response = await fetch('https://voidism.github.io/citation-counts/citations.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const citationData = await response.json();
+                        
+                        if (citationData && typeof citationData.citations === 'number') {
+                            badgeElement.textContent = citationData.citations.toString();
+                            console.log(`Citation count: ${citationData.citations} (last updated: ${citationData.date})`);
+                        } else {
+                            console.error('Citation data invalid format');
+                            badgeElement.textContent = '?';
+                        }
+                    } catch (error) {
+                        console.error('Failed to load citation data:', error);
                         badgeElement.textContent = '?';
                     }
                 }
