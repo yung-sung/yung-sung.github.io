@@ -217,6 +217,102 @@ ul.talks-list {
 }
 
 
+/* Experience/Affiliations section styling */
+.experience-section {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.experience-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+    margin: 0 -10px;
+    scrollbar-width: thin;
+    scrollbar-color: #2a5298 #f0f0f0;
+}
+
+.experience-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-thumb {
+    background: #2a5298;
+    border-radius: 4px;
+}
+
+.experience-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #1e3c72;
+}
+
+.experience-list {
+    display: inline-flex;
+    gap: 30px;
+    padding: 0 10px;
+}
+
+.experience-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+    vertical-align: top;
+    white-space: normal;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    text-decoration: none;
+}
+
+.experience-logo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.experience-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.experience-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.experience-name {
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.experience-period {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.2;
+}
+
 /* News section styling */
 .news-section {
     margin-bottom: 40px;
