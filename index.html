@@ -1082,7 +1082,7 @@
 
         <!-- Image Modal -->
         <div id="imageModal" class="image-modal">
-            <div class="image-modal-loading">Loading high-res image...</div>
+            <div class="image-modal-loading">Loading...</div>
             <img id="modalImage" src="" alt="">
         </div>
 
@@ -1214,30 +1214,39 @@
                         imageModal.style.display = 'block';
                         document.body.style.overflow = 'hidden';
                         
+                        // Show thumbnail immediately with blur effect
+                        modalImg.src = this.src;
+                        modalImg.alt = this.alt;
+                        modalImg.style.filter = 'blur(8px)';
+                        modalImg.style.display = 'block';
+                        
                         // Show loading indicator
                         modalLoading.style.display = 'block';
-                        modalImg.style.display = 'none';
                         
                         // Use high-res image if available, otherwise use the original src
                         const highResUrl = this.getAttribute('data-highres') || this.src;
                         
-                        // Create a new image to preload
-                        const preloadImg = new Image();
-                        preloadImg.onload = function() {
-                            // Once loaded, display it
-                            modalImg.src = highResUrl;
-                            modalImg.alt = img.alt;
+                        // Only load high-res if it's different from thumbnail
+                        if (highResUrl !== this.src) {
+                            // Create a new image to preload
+                            const preloadImg = new Image();
+                            preloadImg.onload = function() {
+                                // Once loaded, replace with high-res
+                                modalImg.src = highResUrl;
+                                modalImg.style.filter = 'none';
+                                modalLoading.style.display = 'none';
+                            };
+                            preloadImg.onerror = function() {
+                                // If high-res fails, just remove blur and loading
+                                modalImg.style.filter = 'none';
+                                modalLoading.style.display = 'none';
+                            };
+                            preloadImg.src = highResUrl;
+                        } else {
+                            // No high-res version, just show the thumbnail
+                            modalImg.style.filter = 'none';
                             modalLoading.style.display = 'none';
-                            modalImg.style.display = 'block';
-                        };
-                        preloadImg.onerror = function() {
-                            // If high-res fails, fall back to thumbnail
-                            modalImg.src = img.src;
-                            modalImg.alt = img.alt;
-                            modalLoading.style.display = 'none';
-                            modalImg.style.display = 'block';
-                        };
-                        preloadImg.src = highResUrl;
+                        }
                     });
                 });
 
