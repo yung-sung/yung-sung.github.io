@@ -1065,6 +1065,20 @@ ul.honors-list {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.image-modal-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    display: none;
+}
+
 /* Bib popup modal */
 .bib-modal {
     display: none;
@@ -1088,9 +1102,9 @@ ul.honors-list {
     padding: 0;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    max-width: 800px;
+    max-width: 1200px;
     width: 90%;
-    max-height: 80%;
+    max-height: 85%;
     overflow: hidden;
     cursor: default;
     border: 1px solid #333;
@@ -1160,4 +1174,30 @@ ul.honors-list {
 
 .bib-modal-text::-webkit-scrollbar-thumb:hover {
     background: #666;
+}
+
+/* BibTeX syntax highlighting */
+.bib-entry-type {
+    color: #569cd6;  /* Blue for @article, @inproceedings, etc */
+    font-weight: bold;
+}
+
+.bib-key {
+    color: #dcdcaa;  /* Yellow for the citation key */
+}
+
+.bib-field {
+    color: #9cdcfe;  /* Light blue for field names (title, author, etc) */
+}
+
+.bib-value {
+    color: #ce9178;  /* Orange/brown for field values */
+}
+
+.bib-bracket {
+    color: #d4d4d4;  /* Light gray for brackets and braces */
+}
+
+.bib-punctuation {
+    color: #d4d4d4;  /* Light gray for commas, equals signs */
 }
