@@ -197,6 +197,20 @@ ul.talks-list {
     margin: 0;
 }
 
+.bio-photo .info-card .old-email {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.bio-photo .info-card .email-note {
+    color: #999;
+    font-size: 0.85em;
+}
+
+.bio-photo .info-card .current-email {
+    color: #555;
+}
+
 .bio-content {
     flex: 1;
     min-width: 0;
