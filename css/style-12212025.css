@@ -1233,3 +1233,58 @@ ul.honors-list {
 .bib-punctuation {
     color: #d4d4d4;  /* Light gray for commas, equals signs */
 }
+
+/* Footer logos and responsive layout */
+.footer-row {
+    align-items: center;
+}
+
+.footer-copyright p {
+    margin-bottom: 0;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.footer-logos .image-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-logo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+}
+
+.footer-logo-csail {
+    height: 64px;
+}
+
+.footer-logo-mit {
+    height: 42px;
+}
+
+@media (max-width: 767.98px) {
+    .footer-copyright {
+        margin-bottom: 18px;
+    }
+
+    .footer-logos {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .footer-logo-csail {
+        height: 56px;
+    }
+
+    .footer-logo-mit {
+        height: 36px;
+    }
+}

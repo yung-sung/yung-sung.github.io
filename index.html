@@ -32,7 +32,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style-12212025.css">
+        <link rel="stylesheet" href="css/style-12212025.css?v=20260805">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -1074,18 +1074,18 @@
                 </div>
             </div>
             <footer class="pt-2 my-md-2 pt-md-2 border-top">
-                <div class="row justify-content-center">
-                    <div class="col-6 col-md text-left align-self-center">
+                <div class="row justify-content-center footer-row">
+                    <div class="col-12 col-md-4 text-center text-md-left align-self-center footer-copyright">
                         <p class="h5 text-muted">
-                            © Yung-Sung Chuang, 2025
+                            © Yung-Sung Chuang, <span id="copyrightYear">2026</span>
                         </p>
                     </div>
-                    <div class="col-6 col-md text-right">
+                    <div class="col-12 col-md-8 footer-logos">
                         <a href="https://www.csail.mit.edu/" class="image-link">
-                            <img class="mr-4" src="img/mit_csail_logo_new.svg" alt="MIT CSAIL logo." height="75">
+                            <img class="footer-logo footer-logo-csail" src="img/mit_csail_logo_new.svg" alt="MIT CSAIL logo">
                         </a>
                         <a href="https://www.mit.edu/" class="image-link">
-                            <img src="img/mit_logo.svg" alt="MIT logo." height="50">
+                            <img class="footer-logo footer-logo-mit" src="img/mit_logo.png" alt="MIT logo">
                         </a>
                     </div>
                 </div>
@@ -1111,6 +1111,11 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
+                const copyrightYear = document.getElementById('copyrightYear');
+                if (copyrightYear) {
+                    copyrightYear.textContent = new Date().getFullYear();
+                }
+
                 // Load citation count from remote JSON API
                 async function loadCitationCount() {
                     const badgeElement = document.getElementById('citationBadge');
